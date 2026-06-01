@@ -682,139 +682,93 @@
 
 
 <!-- ═══════════════════════════════════════════════════════ S6 — DUAL CURRENCY + HPM -->
+<!-- ═══════════════════════════════════════════════════════ S5+6 — DUAL CURRENCY + HPM + FIG7 -->
 <section class="slide deep">
   <div class="full stack" style="height:100%;justify-content:space-between;">
+
     <!-- Header -->
     <div class="reveal d1">
-      <p class="label">Core Point — Ecuador's Monetary System</p>
-      <h2 style="font-size:clamp(1.4rem,2.8vw,2.6rem);">Dollarization as a <em style="color:var(--red);">dual currency system</em> — and how HPM drives domestic money creation</h2>
+      <p class="label">Ecuador's Monetary System — Dual Currency &amp; Primary Money Creation</p>
+      <h2>HPM <em>creates</em> domestic money — not the other way around</h2>
     </div>
 
-    <!-- Body: split left=dual currency, right=HPM pyramid -->
-    <div style="flex:1;display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(1.5rem,4vw,4rem);min-height:0;overflow:hidden;" class="reveal d2">
+    <!-- 3-column body -->
+    <div style="flex:1;display:grid;grid-template-columns:0.65fr 0.85fr 1.5fr;gap:clamp(1rem,2.5vw,2.2rem);min-height:0;overflow:hidden;" class="reveal d2">
 
-      <!-- LEFT: dual currency boxes (condensed) -->
-      <div style="display:flex;flex-direction:column;gap:0.5rem;height:100%;">
-        <p style="font-size:var(--t-small);font-style:italic;color:var(--ink-mid);">"Dollarization could be understood as a dual currency system, by having a domestic currency that is used for onshore transactions, and which needs access to high-powered money to transact with the rest of the world." — Erráez &amp; Maldonado (2025)</p>
-        <div class="money-split" style="flex:1;min-height:0;">
-          <div class="money-box" style="padding:clamp(0.6rem,1.4vw,1.1rem);overflow:hidden;">
-            <div class="money-tag tg">HPM · Green Dollars</div>
-            <h3 style="margin:0.3rem 0 0.2rem;font-size:var(--t-small);">High-Powered Money</h3>
-            <p style="font-size:var(--t-label);color:var(--ink-mid);line-height:1.4;">Externally usable. Finite stock — determined by balance-of-payments flows.</p>
-            <div class="rule" style="margin:0.3rem 0;"></div>
-            <ul class="clean" style="gap:0.25rem;">
-              <li style="font-size:var(--t-label);">Official international reserves (BCE)</li>
-              <li style="font-size:var(--t-label);">Private bank external assets (offshore)</li>
-              <li style="font-size:var(--t-label);">Liquidity Funds — mandatory external savings</li>
-              <li style="font-size:var(--t-label);">Vault cash at private banks</li>
-              <li style="font-size:var(--t-label);">Currency in circulation</li>
-            </ul>
-            <div class="callout g" style="margin-top:auto;font-size:var(--t-label);">Broad IR = official IR + bank external assets + vault cash. Official IR ≈ 52% of Broad IR.</div>
-          </div>
-          <div class="money-box" style="background:rgba(154,108,16,0.02);padding:clamp(0.6rem,1.4vw,1.1rem);overflow:hidden;">
-            <div class="money-tag ta">DM · Yellow Dollars</div>
-            <h3 style="margin:0.3rem 0 0.2rem;font-size:var(--t-small);">Domestic Money</h3>
-            <p style="font-size:var(--t-label);color:var(--ink-mid);line-height:1.4;">Onshore purchasing power only. Can expand through domestic balance-sheet operations without new HPM.</p>
-            <div class="rule" style="margin:0.3rem 0;"></div>
-            <ul class="clean" style="gap:0.25rem;">
-              <li style="font-size:var(--t-label);">Private sector deposits — M2 (via BoP + credit)</li>
-              <li style="font-size:var(--t-label);">Bank reserves held at BCE</li>
-              <li style="font-size:var(--t-label);">Created via interbank cross-holdings</li>
-              <li style="font-size:var(--t-label);">Created via fiscal domestic-debt spending</li>
-            </ul>
-            <div class="callout a" style="margin-top:auto;font-size:var(--t-label);">Key risk: when yellow-dollar creation <strong>decouples from green-dollar flows</strong>, BoP pressures intensify.</div>
-          </div>
+      <!-- COLUMN 1: Green vs Yellow -->
+      <div style="display:flex;flex-direction:column;gap:0.4rem;height:100%;">
+        <p class="label" style="margin-bottom:0.2rem;">Two Tiers of Money</p>
+        <!-- HPM Green -->
+        <div class="money-box" style="flex:1;background:rgba(26,92,56,0.05);border:1px solid rgba(26,92,56,0.2);padding:clamp(0.5rem,1.2vw,0.9rem);overflow:hidden;display:flex;flex-direction:column;gap:0.3rem;">
+          <div class="money-tag tg" style="font-size:0.72rem;">HPM · Green $</div>
+          <p style="font-size:var(--t-label);color:var(--ink-mid);line-height:1.4;">Externally usable. Finite — set by BoP flows.</p>
+          <ul class="clean" style="gap:0.2rem;margin-top:0.2rem;">
+            <li style="font-size:var(--t-label);">Official international reserves (BCE)</li>
+            <li style="font-size:var(--t-label);">Bank external assets (offshore)</li>
+            <li style="font-size:var(--t-label);">Liquidity Funds (earmarked)</li>
+            <li style="font-size:var(--t-label);">Vault cash · Currency in circulation</li>
+          </ul>
+          <div class="callout g" style="margin-top:auto;font-size:var(--t-label);padding:0.35rem 0.6rem;">Official IR ≈ 52% · Bank ext. ≈ 30% · Vault ≈ 18%</div>
+        </div>
+        <!-- DM Yellow -->
+        <div class="money-box" style="flex:1;background:rgba(154,108,16,0.04);border:1px solid rgba(154,108,16,0.2);padding:clamp(0.5rem,1.2vw,0.9rem);overflow:hidden;display:flex;flex-direction:column;gap:0.3rem;">
+          <div class="money-tag ta" style="font-size:0.72rem;">DM · Yellow $</div>
+          <p style="font-size:var(--t-label);color:var(--ink-mid);line-height:1.4;">Onshore only. Can expand through domestic balance-sheet operations.</p>
+          <ul class="clean" style="gap:0.2rem;margin-top:0.2rem;">
+            <li style="font-size:var(--t-label);">Private sector deposits (M2)</li>
+            <li style="font-size:var(--t-label);">Bank reserves held at BCE</li>
+            <li style="font-size:var(--t-label);">Created via cross-holdings</li>
+            <li style="font-size:var(--t-label);">Created via fiscal debt spending</li>
+          </ul>
+          <div class="callout a" style="margin-top:auto;font-size:var(--t-label);padding:0.35rem 0.6rem;">Risk: yellow $ creation decouples from green $ flows</div>
         </div>
       </div>
 
-      <!-- RIGHT: HPM sources pyramid (condensed) -->
-      <div style="display:flex;flex-direction:column;gap:0.5rem;height:100%;">
-        <p class="label" style="margin-bottom:0.2rem;">HPM Sources — Active vs. Passive</p>
-        <p style="font-size:var(--t-small);color:var(--ink-muted);margin-bottom:0.3rem;">Not all HPM plays the same role. The distinction determines how the monetary system responds to external shocks.</p>
+      <!-- COLUMN 2: HPM Sources pyramid -->
+      <div style="display:flex;flex-direction:column;gap:0.4rem;height:100%;">
+        <p class="label" style="margin-bottom:0.2rem;">HPM Sources</p>
         <div class="pyr" style="flex:1;display:flex;flex-direction:column;">
           <div class="pyr-row" style="flex:1;">
             <div class="pyr-body">
               <div class="pyr-name">Official international reserves</div>
-              <div class="pyr-sub">Creates deposits system-wide via BoP flows through BCE — every inflow creates a matching domestic liability</div>
+              <div class="pyr-sub">Creates deposits system-wide via BoP flows through BCE</div>
             </div>
             <div class="pyr-tag"><span class="pb pb-act" style="font-size:0.58rem;line-height:1.3;">DM<br>CREATION</span></div>
           </div>
           <div class="pyr-row" style="flex:1;">
             <div class="pyr-body">
               <div class="pyr-name">Bank external assets (excl. LF)</div>
-              <div class="pyr-sub">Creates domestic deposits even if assets are left abroad — does not affect official IR</div>
+              <div class="pyr-sub">Creates domestic deposits even if assets remain abroad</div>
             </div>
             <div class="pyr-tag"><span class="pb pb-act" style="font-size:0.58rem;line-height:1.3;">DM<br>CREATION</span></div>
           </div>
           <div class="pyr-row" style="flex:1;">
             <div class="pyr-body">
               <div class="pyr-name">Vault cash</div>
-              <div class="pyr-sub">Active only when deposited in a formal institution — creates a new deposit on the bank's liability side</div>
+              <div class="pyr-sub">Active only when deposited in a formal institution</div>
             </div>
             <div class="pyr-tag"><span class="pb pb-hpm" style="font-size:0.58rem;line-height:1.3;">DM<br>CREATION</span></div>
           </div>
           <div class="pyr-row" style="flex:1;">
             <div class="pyr-body">
               <div class="pyr-name">Currency in circulation</div>
-              <div class="pyr-sub">Passive outside banking system — activates deposits only when brought into formal institutions</div>
+              <div class="pyr-sub">Passive — activates only when brought into banking system</div>
             </div>
             <div class="pyr-tag"><span class="pb pb-dm">PASSIVE</span></div>
           </div>
           <div class="pyr-row" style="flex:1;">
             <div class="pyr-body">
               <div class="pyr-name">Liquidity Funds</div>
-              <div class="pyr-sub">Earmarked external savings — legally mandated buffer — "does not contribute to the future creation of domestic deposits"</div>
+              <div class="pyr-sub">Earmarked external buffer — does not create domestic deposits</div>
             </div>
             <div class="pyr-tag"><span class="pb pb-dm">BUFFER</span></div>
           </div>
         </div>
-        <div class="panel" style="border-left:2.5px solid var(--green-dark);background:var(--green-dim);padding:0.5rem 0.75rem;margin-top:0.3rem;">
-          <p style="font-size:var(--t-label);">Private banks' external assets ≈ 30% of Broad IR · Vault cash ≈ 18% · Official IR ≈ 52%</p>
-        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══════════════════════════════════════════════════════ S8 — MONEY CREATION PUBLIC SPENDING -->
-<section class="slide alt">
-  <div class="full stack" style="height:100%;justify-content:center;">
-    <div class="reveal d1">
-      <p class="label">Primary Money Creation · Figure 7</p>
-      <h2>Green dollars <em>create</em> yellow dollars</h2>
-    </div>
-    <div class="grid-2 reveal d2" style="align-items:start;">
-      <!-- Left: narrative -->
-      <div class="stack-sm">
-        <div class="flow-row f4">
-          <div class="flow-step">
-            <div class="flow-dot">1</div>
-            <h3>External inflow</h3>
-            <p>BoP transaction — oil export, public debt, remittance, FDI — any inflow in dollars.</p>
-          </div>
-          <div class="flow-step">
-            <div class="flow-dot">2</div>
-            <h3>BCE receives HPM</h3>
-            <p>International reserves rise on the asset side of the BCE balance sheet.</p>
-          </div>
-          <div class="flow-step">
-            <div class="flow-dot">3</div>
-            <h3>Liability created</h3>
-            <p>TGA or bank reserves rise on the liability side. Yellow dollars are born.</p>
-          </div>
-          <div class="flow-step">
-            <div class="flow-dot">4</div>
-            <h3>M2 grows</h3>
-            <p>Banks receive reserves, create client deposits.</p>
-          </div>
-        </div>
-        <div class="panel" style="border-left:2.5px solid var(--amber);background:var(--amber-dim);">
-          <p style="font-size:var(--t-small);">"Every dollar that arrived through the BoP, which led to an increase in IR, also created both new liquid assets for private banks <strong>and</strong> a new domestic deposit inside the economy."</p>
-        </div>
-        <p style="font-size:var(--t-small);color:var(--ink-mid);">Private banks may also receive offshore wires without going through BCE — this creates a deposit backed by an external asset but leaves official IR unchanged. This is why <strong>Broad IR</strong> must be used to map primary money creation fully.</p>
-      </div>
-      <!-- Right: Figure 7 v2 balance sheets — f1v2 colored-block style -->
-      <div class="stack-sm" style="height:100%;justify-content:space-between;">
+      <!-- COLUMN 3: Figure 7 balance sheets -->
+      <div style="display:flex;flex-direction:column;gap:0.4rem;height:100%;">
+        <p class="label" style="margin-bottom:0.2rem;">Figure 7 · BoP Inflow → Domestic Money Creation</p>
         <div class="f1v2" style="flex:1;">
 
           <!-- Central Bank -->
@@ -850,13 +804,13 @@
                   <div class="f1v2-bs">
                     <div class="f1v2-col assets">
                       <div class="f1v2-hd">Assets</div>
-                      <div class="f1v2-block f1v2-new-dep">↑ New I.R.</div>
+                      <div class="f1v2-block f1v2-new-dep">&#8593; New I.R.</div>
                       <div class="f1v2-block f9-ir">Intl. Reserves</div>
                       <div class="f1v2-filler">Other</div>
                     </div>
                     <div class="f1v2-col">
                       <div class="f1v2-hd">Liabilities</div>
-                      <div class="f1v2-block f1v2-new-loans">↑ New B.R.</div>
+                      <div class="f1v2-block f1v2-new-loans">&#8593; New B.R.</div>
                       <div class="f1v2-block f1v2-reserves">Banks' Reserves</div>
                       <div class="f1v2-block f9-loan">Treasury G.A.</div>
                       <div class="f1v2-filler">Other L&amp;E</div>
@@ -900,14 +854,14 @@
                   <div class="f1v2-bs">
                     <div class="f1v2-col assets">
                       <div class="f1v2-hd">Assets</div>
-                      <div class="f1v2-block f1v2-new-loans">↑ New B.R.</div>
+                      <div class="f1v2-block f1v2-new-loans">&#8593; New B.R.</div>
                       <div class="f1v2-block f1v2-currency">Currency</div>
                       <div class="f1v2-block f1v2-reserves">Banks' Reserves</div>
                       <div class="f1v2-block f1v2-prev-loans">Loans</div>
                     </div>
                     <div class="f1v2-col">
                       <div class="f1v2-hd">Liabilities</div>
-                      <div class="f1v2-block" style="background:rgba(196,82,28,0.88);color:var(--white);font-weight:700;">↑ New Deposits</div>
+                      <div class="f1v2-block" style="background:rgba(196,82,28,0.88);color:var(--white);font-weight:700;">&#8593; New Deposits</div>
                       <div class="f1v2-block f1v2-deposits">Deposits</div>
                       <div class="f1v2-filler">Other L&amp;E</div>
                     </div>
@@ -918,15 +872,13 @@
           </div>
 
         </div>
-        <p style="font-size:var(--t-small);color:var(--ink-mid);"><em style="color:var(--red);">IR are already inside the economy</em> — every inflow creates a matching domestic liability. When money flows out, domestic deposits are destroyed alongside the drawdown of IR.</p>
+        <p style="font-size:var(--t-label);color:var(--ink-mid);"><em style="color:var(--red);">IR are already inside the economy</em> — every inflow creates a matching domestic liability. Outflows destroy deposits alongside IR.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════ S7 — CREDIT IN DOLLARIZATION (moved) -->
-
-<!-- ═══════════════════════════════════════════════════════ S7 — CBC FINANCING -->
 <section class="slide alt">
   <div class="split">
     <div class="stack cs">
