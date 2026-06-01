@@ -415,7 +415,7 @@
 <section class="slide">
   <div class="title-grid">
     <div class="title-left">
-      <p class="label reveal d1">International and Monetary Economics Network 2026</p>
+      <p class="label reveal d1" style="color:#bacf40;font-size:clamp(1.05rem,1.25vw,1.18rem);">IV Congreso Anual Asociación de Economía del Ecuador</p>
       <h1 class="reveal d2" style="font-size:clamp(1.9rem,4.2vw,4.2rem);line-height:1.08;">Monetary Dynamics in <em>Dollarized</em> Economies</h1>
       <p class="reveal d3" style="font-family:var(--f-display);font-size:clamp(1.5rem,3vw,2.8rem);font-weight:700;font-style:italic;color:var(--ink);line-height:1.1;margin-top:0.4rem;">The Case of Ecuador</p>
       <div class="reveal d4">
@@ -1360,7 +1360,8 @@
   /* QR codes */
   const url    = 'https://doi.org/10.47550/RCE/35.2.3';
   const qrCfg  = { text: url, width: 150, height: 150, colorDark: '#1a1814', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M };
-  new QRCode(document.getElementById('qr-title'), qrCfg);
+  const qrTitleCfg = { ...qrCfg, width: 190, height: 190 };
+  new QRCode(document.getElementById('qr-title'), qrTitleCfg);
   new QRCode(document.getElementById('qr-end'),   qrCfg);
 </script>
 </body>
