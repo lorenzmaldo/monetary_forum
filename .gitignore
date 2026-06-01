@@ -1,5 +1,6 @@
 # Ignore everything except the presentation HTML files
 *
 !.gitignore
+!AI_CONTEXT.md
 !index.html
 !monetary-dynamics-forum.html
