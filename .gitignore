@@ -1,5 +1,5 @@
 # Ignore everything except the presentation HTML files
 *
 !.gitignore
-!monetary-dynamics-forum-short.html
+!index.html
 !monetary-dynamics-forum.html
