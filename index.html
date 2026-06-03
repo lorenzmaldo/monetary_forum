@@ -402,6 +402,297 @@
     .f1v2-legend { display:flex; flex-wrap:wrap; gap:0.25rem 1rem; justify-content:center; margin-top:0.4rem; }
     .f1v2-leg { display:flex; align-items:center; gap:0.3rem; font-size:var(--t-label); color:var(--ink-muted); }
     .f1v2-swatch { width:0.85rem; height:0.75rem; border-radius:2px; flex-shrink:0; }
+
+    /* Slide 5 option */
+    .s5-layout {
+      flex:1; min-height:0; display:grid;
+      grid-template-columns:0.62fr 0.72fr 1.72fr;
+      gap:clamp(0.8rem,1.6vw,1.4rem); align-items:stretch;
+    }
+    .s5-stack { display:flex; flex-direction:column; gap:0.65rem; min-height:0; }
+    .s5-panel { border:1px solid var(--line); background:rgba(255,255,255,0.28); padding:clamp(0.75rem,1.4vw,1rem); }
+    .s5-money-card { flex:1; min-height:0; display:flex; flex-direction:column; gap:0.36rem; }
+    .s5-money-card.green { background:rgba(26,92,56,0.06); border-color:rgba(26,92,56,0.24); }
+    .s5-money-card.amber { background:rgba(154,108,16,0.06); border-color:rgba(154,108,16,0.24); }
+    .s5-tag {
+      display:inline-flex; align-self:flex-start; padding:0.2rem 0.58rem;
+      font-size:0.72rem; font-weight:800; letter-spacing:0.12em;
+      text-transform:uppercase; border:1px solid currentColor;
+    }
+    .s5-tag.green { color:var(--green-dark); background:var(--green-dim); }
+    .s5-tag.amber { color:var(--amber); background:var(--amber-dim); }
+    .s5-tiny-list { display:flex; flex-direction:column; gap:0.22rem; margin-top:0.05rem; }
+    .s5-tiny-list div {
+      display:grid; grid-template-columns:0.8rem 1fr; gap:0.42rem;
+      font-size:clamp(0.78rem,0.86vw,0.9rem); color:var(--ink-mid); line-height:1.24;
+    }
+    .s5-dot { width:0.38rem; height:0.38rem; margin-top:0.42rem; background:var(--red); }
+    .s5-source { flex:1; min-height:0; display:grid; grid-template-rows:repeat(4,1fr); border:1px solid var(--line); }
+    .s5-source-row { display:grid; grid-template-columns:1fr 6.4rem; border-bottom:1px solid var(--line); background:rgba(255,255,255,0.22); }
+    .s5-source-row:last-child { border-bottom:none; }
+    .s5-source-body { padding:0.56rem 0.72rem; }
+    .s5-source-name { font-size:var(--t-small); font-weight:700; line-height:1.15; color:var(--ink); }
+    .s5-source-sub { font-size:var(--t-label); color:var(--ink-muted); line-height:1.25; margin-top:0.16rem; }
+    .s5-source-tag {
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      border-left:1px solid var(--line); font-size:0.72rem; font-weight:800;
+      letter-spacing:0.08em; text-transform:uppercase; color:var(--green-dark);
+      background:var(--green-dim); padding:0.3rem;
+    }
+    .s5-source-tag.passive { color:var(--ink-muted); background:rgba(26,24,20,0.05); }
+    .s5-figure { flex:1; min-height:0; display:flex; flex-direction:column; border:1px solid var(--line); background:rgba(255,255,255,0.3); }
+    .s5-entity-title {
+      background:var(--ink); color:var(--white); font-size:var(--t-small);
+      font-weight:800; letter-spacing:0.07em; padding:0.34rem 0.72rem;
+    }
+    .s5-flow-stack { flex:1; min-height:0; display:flex; flex-direction:column; gap:0.42rem; padding:0.58rem 0.72rem 0.68rem; }
+    .s5-mini-entity { flex:1; min-height:0; display:flex; flex-direction:column; border:1px solid var(--line); background:rgba(250,248,243,0.42); }
+    .s5-mini-title {
+      padding:0.24rem 0.55rem; font-size:clamp(0.78rem,0.9vw,0.95rem);
+      font-weight:800; letter-spacing:0.06em; color:var(--white); background:var(--ink);
+    }
+    .s5-mini-title.bank { background:var(--green-dark); }
+    .s5-mini-states { flex:1; min-height:0; display:grid; grid-template-columns:1fr 2.6rem 1fr; gap:0.52rem; align-items:stretch; padding:0.42rem 0.52rem; }
+    .s5-mini-state { min-width:0; display:flex; flex-direction:column; gap:0.2rem; }
+    .s5-mini-label {
+      text-align:center; font-size:clamp(0.66rem,0.72vw,0.78rem); font-weight:800;
+      text-transform:uppercase; letter-spacing:0.11em; color:var(--ink-muted);
+    }
+    .s5-mini-label.hi { color:var(--red); }
+    .s5-mini-balance { flex:1; min-height:0; display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--line); overflow:hidden; }
+    .s5-mini-col + .s5-mini-col { border-left:1px solid var(--line); }
+    .s5-mini-hd {
+      padding:0.2rem; border-bottom:1px solid var(--line); font-size:clamp(0.6rem,0.68vw,0.72rem);
+      font-weight:800; text-transform:uppercase; letter-spacing:0.1em; text-align:center; color:var(--ink-muted);
+    }
+    .s5-mini-block {
+      min-height:1.34rem; display:flex; align-items:center; justify-content:center; text-align:center;
+      padding:0.18rem 0.24rem; border-bottom:1px dashed rgba(26,24,20,0.12);
+      font-size:clamp(0.62rem,0.72vw,0.78rem); font-weight:700; line-height:1.12;
+    }
+    .s5-mini-filler {
+      min-height:1.24rem; display:flex; align-items:center; justify-content:center; padding:0.16rem;
+      font-size:clamp(0.58rem,0.68vw,0.74rem); color:var(--ink-muted); font-style:italic; text-align:center;
+    }
+    .s5-mini-arrow { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:0.22rem; color:var(--ink-muted); min-width:0; }
+    .s5-mini-arrow .f1v2-arrow-h { width:1.2rem; }
+    .s5-mini-arrow .f1v2-arrow-lbl {
+      font-size:clamp(0.58rem,0.66vw,0.72rem); white-space:normal; line-height:1.05; margin-top:0;
+    }
+    .s5-closing {
+      border-left:3px solid var(--red); background:var(--red-dim); padding:0.55rem 0.75rem;
+      font-size:var(--t-small); color:var(--ink); font-weight:600; line-height:1.35;
+    }
+
+    /* Slide 6 option */
+    .s6-layout {
+      flex:1; min-height:0; display:grid; grid-template-columns:0.7fr 1.3fr;
+      gap:clamp(1.6rem,3vw,2.6rem); align-items:stretch;
+    }
+    .s6-left {
+      min-height:0; display:flex; flex-direction:column;
+      justify-content:space-between; gap:var(--gap);
+    }
+    .s6-title {
+      max-width:18ch; font-family:var(--f-display);
+      font-size:clamp(2.25rem,5.2vw,5rem); line-height:0.98;
+      font-weight:900; color:var(--ink);
+    }
+    .s6-title em { color:var(--red); font-style:italic; }
+    .s6-quote {
+      border-left:3px solid var(--red); background:var(--red-dim);
+      padding:0.85rem 1rem;
+    }
+    .s6-quote h3 {
+      font-size:clamp(1.1rem,1.55vw,1.35rem); line-height:1.16;
+      margin-bottom:0.35rem; color:var(--ink);
+    }
+    .s6-quote p { font-size:var(--t-small); color:var(--ink-mid); line-height:1.45; }
+    .s6-note {
+      border:1px solid rgba(154,108,16,0.28); background:var(--amber-dim);
+      padding:0.75rem 0.9rem; color:var(--ink); font-size:var(--t-small);
+      font-weight:650; line-height:1.38;
+    }
+    .s6-right { min-height:0; display:flex; flex-direction:column; gap:0.7rem; }
+    .s6-mechanism {
+      flex:1; min-height:0; display:flex; flex-direction:column;
+      border:1px solid var(--line); background:rgba(255,255,255,0.32);
+    }
+    .s6-mechanism-title {
+      padding:0.36rem 0.75rem; background:var(--ink); color:var(--white);
+      font-size:var(--t-small); font-weight:800; letter-spacing:0.07em;
+    }
+    .s6-steps {
+      display:grid; grid-template-columns:repeat(4,1fr);
+      border-bottom:1px solid var(--line); background:rgba(250,248,243,0.45);
+    }
+    .s6-step {
+      min-height:5.5rem; padding:0.65rem 0.7rem; border-right:1px solid var(--line);
+      display:flex; flex-direction:column; gap:0.22rem;
+    }
+    .s6-step:last-child { border-right:none; }
+    .s6-num {
+      width:1.45rem; height:1.45rem; display:flex; align-items:center; justify-content:center;
+      border-radius:50%; border:1.5px solid currentColor; font-size:0.78rem;
+      font-weight:800; color:var(--red); margin-bottom:0.15rem;
+    }
+    .s6-step h3 { font-size:clamp(0.9rem,1.05vw,1.02rem); line-height:1.15; color:var(--ink); }
+    .s6-step p { font-size:clamp(0.76rem,0.86vw,0.88rem); line-height:1.22; color:var(--ink-muted); }
+    .s6-balances {
+      flex:1; min-height:0; display:grid; grid-template-rows:1fr 1fr;
+      gap:0.52rem; padding:0.7rem;
+    }
+    .s6-entity {
+      min-height:0; display:flex; flex-direction:column;
+      border:1px solid var(--line); background:rgba(250,248,243,0.45);
+    }
+    .s6-entity-name {
+      padding:0.25rem 0.55rem; font-size:clamp(0.8rem,0.92vw,0.96rem);
+      font-weight:800; letter-spacing:0.06em; color:var(--white); background:var(--ink);
+    }
+    .s6-entity-name.bank { background:var(--green-dark); }
+    .s6-state-row {
+      flex:1; min-height:0; display:grid; grid-template-columns:1fr 2.5rem 1fr 2.5rem 1fr;
+      gap:0.44rem; padding:0.42rem 0.5rem; align-items:stretch;
+    }
+    .s6-state-row.bank { grid-template-columns:1fr 2.5rem 1fr; }
+    .s6-state { min-width:0; display:flex; flex-direction:column; gap:0.18rem; }
+    .s6-state-label {
+      text-align:center; font-size:clamp(0.62rem,0.7vw,0.75rem); font-weight:800;
+      letter-spacing:0.11em; text-transform:uppercase; color:var(--ink-muted);
+    }
+    .s6-state-label.hi { color:var(--red); }
+    .s6-bs {
+      flex:1; min-height:0; display:grid; grid-template-columns:1fr 1fr;
+      border:1px solid var(--line); overflow:hidden;
+    }
+    .s6-col + .s6-col { border-left:1px solid var(--line); }
+    .s6-hd {
+      padding:0.18rem; border-bottom:1px solid var(--line); text-align:center;
+      font-size:clamp(0.56rem,0.62vw,0.68rem); font-weight:800;
+      letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-muted);
+    }
+    .s6-cell {
+      min-height:1.18rem; padding:0.15rem 0.2rem; display:flex; align-items:center;
+      justify-content:center; text-align:center; border-bottom:1px dashed rgba(26,24,20,0.12);
+      font-size:clamp(0.56rem,0.67vw,0.74rem); font-weight:700; line-height:1.1;
+    }
+    .s6-fill {
+      min-height:1.05rem; display:flex; align-items:center; justify-content:center;
+      padding:0.12rem; text-align:center; color:var(--ink-muted);
+      font-size:clamp(0.54rem,0.62vw,0.7rem); font-style:italic;
+    }
+    .s6-ir { background:rgba(30,110,190,0.14); color:#1a5a8c; }
+    .s6-res { background:var(--green-dim); color:var(--green-dark); }
+    .s6-dep { background:rgba(120,75,170,0.13); color:#6b4a9e; }
+    .s6-gov { background:rgba(155,65,50,0.13); color:#8a3a28; }
+    .s6-debt { background:rgba(26,24,20,0.82); color:var(--white); }
+    .s6-new-gov { background:rgba(154,108,16,0.8); color:var(--white); }
+    .s6-new-res { background:rgba(154,108,16,0.78); color:var(--white); }
+    .s6-new-dep { background:rgba(26,92,56,0.82); color:var(--white); }
+    .s6-arrow {
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      gap:0.18rem; color:var(--ink-muted); min-width:0;
+    }
+    .s6-arrow-line { display:flex; align-items:center; }
+    .s6-arrow-stem { width:1.08rem; height:2px; background:var(--ink-muted); }
+    .s6-arrow-head {
+      width:0; height:0; border-top:4px solid transparent; border-bottom:4px solid transparent;
+      border-left:7px solid var(--ink-muted);
+    }
+    .s6-arrow-label {
+      font-size:clamp(0.54rem,0.62vw,0.7rem); font-style:italic;
+      text-align:center; line-height:1.05;
+    }
+    .s6-closing {
+      border-left:3px solid var(--red); background:var(--red-dim);
+      padding:0.62rem 0.8rem; font-size:var(--t-small);
+      font-weight:700; line-height:1.35; color:var(--ink);
+    }
+
+    /* Slide 7 option */
+    .s7-layout {
+      flex:1; min-height:0; display:grid; grid-template-columns:0.48fr 1.52fr;
+      gap:clamp(1.2rem,2.4vw,2.2rem); align-items:stretch;
+    }
+    .s7-left { min-height:0; display:flex; flex-direction:column; justify-content:space-between; gap:var(--gap); }
+    .s7-title {
+      font-family:var(--f-display); font-size:clamp(2.4rem,5vw,4.8rem);
+      line-height:0.98; font-weight:900; color:var(--ink); max-width:12ch;
+    }
+    .s7-title em { color:var(--red); font-style:italic; }
+    .s7-card {
+      border:1px solid var(--line); background:rgba(255,255,255,0.3);
+      padding:0.75rem 0.9rem;
+    }
+    .s7-card.risk { border-left:3px solid var(--red); background:var(--red-dim); }
+    .s7-card h3 {
+      font-size:clamp(1rem,1.35vw,1.18rem); line-height:1.2; margin-bottom:0.35rem; color:var(--ink);
+    }
+    .s7-card p { font-size:var(--t-small); line-height:1.4; color:var(--ink-mid); }
+    .s7-mech { min-height:0; display:flex; flex-direction:column; gap:0.65rem; }
+    .s7-grid {
+      flex:1; min-height:0; display:grid; grid-template-columns:7.2rem repeat(3,1fr);
+      grid-template-rows:auto 1fr 1fr auto; border:1px solid var(--line);
+      background:rgba(255,255,255,0.3);
+    }
+    .s7-corner {
+      background:var(--ink); color:var(--white); font-size:var(--t-label);
+      font-weight:800; letter-spacing:0.08em; text-transform:uppercase;
+      display:flex; align-items:center; justify-content:center; padding:0.45rem;
+    }
+    .s7-time {
+      border-left:1px solid rgba(255,255,255,0.14); background:var(--ink);
+      color:var(--white); padding:0.45rem 0.55rem;
+    }
+    .s7-time h3 { font-size:var(--t-small); line-height:1.1; color:var(--white); }
+    .s7-time p { font-size:clamp(0.7rem,0.78vw,0.82rem); color:rgba(250,248,243,0.78); line-height:1.2; margin-top:0.12rem; }
+    .s7-bank {
+      border-top:1px solid var(--line); background:rgba(26,24,20,0.04);
+      color:var(--ink); font-size:var(--t-small); font-weight:800;
+      display:flex; align-items:center; justify-content:center; padding:0.5rem;
+    }
+    .s7-bank.b { color:var(--green-dark); }
+    .s7-cell {
+      border-left:1px solid var(--line); border-top:1px solid var(--line);
+      padding:0.45rem 0.5rem; display:flex; flex-direction:column; gap:0.25rem;
+      justify-content:center; min-width:0;
+    }
+    .s7-item {
+      display:grid; grid-template-columns:1fr auto; gap:0.4rem; align-items:center;
+      font-size:clamp(0.72rem,0.86vw,0.92rem); line-height:1.12;
+      border:1px solid rgba(26,24,20,0.09); background:rgba(250,248,243,0.55);
+      padding:0.23rem 0.32rem;
+    }
+    .s7-item span:first-child { color:var(--ink-muted); }
+    .s7-item strong { color:var(--ink); font-weight:800; }
+    .s7-item.up { background:var(--green-dim); border-color:rgba(26,92,56,0.22); }
+    .s7-item.down { background:rgba(184,32,47,0.08); border-color:rgba(184,32,47,0.2); }
+    .s7-item.new { background:var(--amber-dim); border-color:rgba(154,108,16,0.24); }
+    .s7-total-label {
+      border-top:1px solid var(--line); background:var(--paper-alt);
+      display:flex; align-items:center; justify-content:center;
+      font-size:var(--t-label); font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-muted);
+      padding:0.42rem;
+    }
+    .s7-total {
+      border-left:1px solid var(--line); border-top:1px solid var(--line);
+      background:var(--paper-alt); display:grid; grid-template-columns:1fr 1fr; gap:0.35rem;
+      padding:0.42rem;
+    }
+    .s7-pill {
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      padding:0.28rem 0.35rem; font-size:clamp(0.72rem,0.82vw,0.88rem);
+      font-weight:800; border:1px solid var(--line); background:rgba(255,255,255,0.45);
+      line-height:1.15;
+    }
+    .s7-pill.red { color:var(--red); background:var(--red-dim); border-color:rgba(184,32,47,0.24); }
+    .s7-pill.green { color:var(--green-dark); background:var(--green-dim); border-color:rgba(26,92,56,0.24); }
+    .s7-closing {
+      border-left:3px solid var(--red); background:var(--red-dim);
+      padding:0.58rem 0.8rem; font-size:var(--t-small); font-weight:700;
+      color:var(--ink); line-height:1.35;
+    }
   </style>
 </head>
 <body>
@@ -620,351 +911,307 @@
 <!-- ═══════════════════════════════════════════════════════ S5+6 — DUAL CURRENCY + HPM + FIG7 -->
 <section class="slide deep">
   <div class="full stack" style="height:100%;justify-content:space-between;">
-
-    <!-- Header -->
     <div class="reveal d1">
       <p class="label">Ecuador's Monetary System — Dual Currency &amp; Primary Money Creation</p>
-      <h2>HPM <em>creates</em> domestic money — not the other way around</h2>
+      <h2 style="font-size:clamp(2rem,3.8vw,3.9rem);line-height:1.02;max-width:31ch;">HPM <em>creates</em> domestic money — not the other way around</h2>
     </div>
 
-    <!-- 3-column body -->
-    <div style="flex:1;display:grid;grid-template-columns:0.65fr 0.85fr 1.5fr;gap:clamp(1rem,2.5vw,2.2rem);min-height:0;overflow:hidden;" class="reveal d2">
-
-      <!-- COLUMN 1: Green vs Yellow -->
-      <div style="display:flex;flex-direction:column;gap:0.4rem;height:100%;">
-        <p class="label" style="margin-bottom:0.2rem;">Two Tiers of Money</p>
-        <!-- HPM Green -->
-        <div class="money-box" style="flex:1;background:rgba(26,92,56,0.05);border:1px solid rgba(26,92,56,0.2);padding:clamp(0.5rem,1.2vw,0.9rem);overflow:hidden;display:flex;flex-direction:column;gap:0.3rem;">
-          <div class="money-tag tg" style="font-size:0.72rem;">HPM · Green $</div>
-          <p style="font-size:var(--t-label);color:var(--ink-mid);line-height:1.4;">Externally usable. Finite — set by BoP flows.</p>
-          <ul class="clean" style="gap:0.2rem;margin-top:0.2rem;">
-            <li style="font-size:var(--t-label);">Official international reserves (BCE)</li>
-            <li style="font-size:var(--t-label);">Bank external assets (offshore)</li>
-            <li style="font-size:var(--t-label);">Liquidity Funds (earmarked)</li>
-            <li style="font-size:var(--t-label);">Vault cash · Currency in circulation</li>
-          </ul>
-          <div class="callout g" style="margin-top:auto;font-size:var(--t-label);padding:0.35rem 0.6rem;">Official IR ≈ 52% · Bank ext. ≈ 30% · Vault ≈ 18%</div>
+    <div class="s5-layout reveal d2">
+      <div class="s5-stack">
+        <p class="label" style="margin-bottom:0;">Two Tiers of Money</p>
+        <div class="s5-panel s5-money-card green">
+          <span class="s5-tag green">HPM · Green $</span>
+          <p style="font-size:var(--t-small);"><strong>Externally usable dollars.</strong> Scarce, finite, and governed by balance-of-payments flows.</p>
+          <div class="s5-tiny-list">
+            <div><span class="s5-dot"></span><span>International reserves, bank external assets, and cash.</span></div>
+            <div><span class="s5-dot"></span><span>The hard constraint behind domestic money expansion.</span></div>
+          </div>
         </div>
-        <!-- DM Yellow -->
-        <div class="money-box" style="flex:1;background:rgba(154,108,16,0.04);border:1px solid rgba(154,108,16,0.2);padding:clamp(0.5rem,1.2vw,0.9rem);overflow:hidden;display:flex;flex-direction:column;gap:0.3rem;">
-          <div class="money-tag ta" style="font-size:0.72rem;">DM · Yellow $</div>
-          <p style="font-size:var(--t-label);color:var(--ink-mid);line-height:1.4;">Onshore only. Can expand through domestic balance-sheet operations.</p>
-          <ul class="clean" style="gap:0.2rem;margin-top:0.2rem;">
-            <li style="font-size:var(--t-label);">Private sector deposits (M2)</li>
-            <li style="font-size:var(--t-label);">Bank reserves held at BCE</li>
-            <li style="font-size:var(--t-label);">Created via cross-holdings</li>
-            <li style="font-size:var(--t-label);">Created via fiscal debt spending</li>
-          </ul>
-          <div class="callout a" style="margin-top:auto;font-size:var(--t-label);padding:0.35rem 0.6rem;">Risk: yellow $ creation decouples from green $ flows</div>
-        </div>
-      </div>
-
-      <!-- COLUMN 2: HPM Sources pyramid -->
-      <div style="display:flex;flex-direction:column;gap:0.4rem;height:100%;">
-        <p class="label" style="margin-bottom:0.2rem;">HPM Sources</p>
-        <div class="pyr" style="flex:1;display:flex;flex-direction:column;">
-          <div class="pyr-row" style="flex:1;">
-            <div class="pyr-body">
-              <div class="pyr-name">Official international reserves</div>
-              <div class="pyr-sub">Creates deposits system-wide via BoP flows through BCE</div>
-            </div>
-            <div class="pyr-tag"><span class="pb pb-act" style="font-size:0.58rem;line-height:1.3;">DM<br>CREATION</span></div>
-          </div>
-          <div class="pyr-row" style="flex:1;">
-            <div class="pyr-body">
-              <div class="pyr-name">Bank external assets (excl. LF)</div>
-              <div class="pyr-sub">Creates domestic deposits even if assets remain abroad</div>
-            </div>
-            <div class="pyr-tag"><span class="pb pb-act" style="font-size:0.58rem;line-height:1.3;">DM<br>CREATION</span></div>
-          </div>
-          <div class="pyr-row" style="flex:1;">
-            <div class="pyr-body">
-              <div class="pyr-name">Vault cash</div>
-              <div class="pyr-sub">Active only when deposited in a formal institution</div>
-            </div>
-            <div class="pyr-tag"><span class="pb pb-hpm" style="font-size:0.58rem;line-height:1.3;">DM<br>CREATION</span></div>
-          </div>
-          <div class="pyr-row" style="flex:1;">
-            <div class="pyr-body">
-              <div class="pyr-name">Currency in circulation</div>
-              <div class="pyr-sub">Passive — activates only when brought into banking system</div>
-            </div>
-            <div class="pyr-tag"><span class="pb pb-dm">PASSIVE</span></div>
-          </div>
-          <div class="pyr-row" style="flex:1;">
-            <div class="pyr-body">
-              <div class="pyr-name">Liquidity Funds</div>
-              <div class="pyr-sub">Earmarked external buffer — does not create domestic deposits</div>
-            </div>
-            <div class="pyr-tag"><span class="pb pb-dm">BUFFER</span></div>
+        <div class="s5-panel s5-money-card amber">
+          <span class="s5-tag amber">DM · Yellow $</span>
+          <p style="font-size:var(--t-small);"><strong>Domestic money.</strong> Useful onshore and expandable through balance sheets.</p>
+          <div class="s5-tiny-list">
+            <div><span class="s5-dot"></span><span>Deposits and domestic payment balances.</span></div>
+            <div><span class="s5-dot"></span><span>Fragile when it outruns green-dollar inflows.</span></div>
           </div>
         </div>
       </div>
 
-      <!-- COLUMN 3: Figure 7 balance sheets -->
-      <div style="display:flex;flex-direction:column;gap:0.4rem;height:100%;">
-        <p class="label" style="margin-bottom:0.2rem;">Figure 7 · BoP Inflow → Domestic Money Creation</p>
-        <div class="f1v2" style="flex:1;">
+      <div class="s5-stack">
+        <p class="label" style="margin-bottom:0;">HPM Sources</p>
+        <div class="s5-source">
+          <div class="s5-source-row">
+            <div class="s5-source-body">
+              <div class="s5-source-name">Official international reserves</div>
+              <div class="s5-source-sub">BCE channel for system-wide settlement liquidity.</div>
+            </div>
+            <div class="s5-source-tag">Creates DM</div>
+          </div>
+          <div class="s5-source-row">
+            <div class="s5-source-body">
+              <div class="s5-source-name">Bank external assets</div>
+              <div class="s5-source-sub">Offshore liquidity held by private banks.</div>
+            </div>
+            <div class="s5-source-tag">Creates DM</div>
+          </div>
+          <div class="s5-source-row">
+            <div class="s5-source-body">
+              <div class="s5-source-name">Vault cash</div>
+              <div class="s5-source-sub">Active once it enters formal balance sheets.</div>
+            </div>
+            <div class="s5-source-tag">Activates</div>
+          </div>
+          <div class="s5-source-row">
+            <div class="s5-source-body">
+              <div class="s5-source-name">Currency in circulation / liquidity funds</div>
+              <div class="s5-source-sub">Passive cash or earmarked buffers.</div>
+            </div>
+            <div class="s5-source-tag passive">Passive</div>
+          </div>
+        </div>
+      </div>
 
-          <!-- Central Bank -->
-          <div class="f1v2-entity">
-            <div class="f1v2-title" style="background:var(--ink);">Central Bank</div>
-            <div style="flex:1;display:flex;flex-direction:column;background:rgba(255,255,255,0.38);border:1px solid var(--line);border-top:none;overflow:hidden;">
-              <div style="display:flex;align-items:center;gap:0.8rem;padding:0.3rem 0.85rem 0.1rem;flex-shrink:0;">
-                <div style="flex:1;text-align:center;" class="f1v2-tl">Before</div>
-                <div style="min-width:2.9rem;flex-shrink:0;"></div>
-                <div style="flex:1;text-align:center;" class="f1v2-tl hi">After BoP Inflow</div>
-              </div>
-              <div style="flex:1;display:flex;align-items:flex-end;gap:0.8rem;padding:0 0.85rem 0.5rem;overflow:hidden;">
-                <div class="f1v2-tg">
-                  <div class="f1v2-bs">
-                    <div class="f1v2-col assets">
-                      <div class="f1v2-hd">Assets</div>
-                      <div class="f1v2-block f9-ir">Intl. Reserves</div>
-                      <div class="f1v2-filler">Other</div>
+      <div class="s5-stack">
+        <p class="label" style="margin-bottom:0;">BoP Inflow → Domestic Money Creation</p>
+        <div class="s5-figure">
+          <div class="s5-entity-title">Balance-sheet transmission</div>
+          <div class="s5-flow-stack">
+            <div class="s5-mini-entity">
+              <div class="s5-mini-title">Central Bank</div>
+              <div class="s5-mini-states">
+                <div class="s5-mini-state">
+                  <div class="s5-mini-label">Before</div>
+                  <div class="s5-mini-balance">
+                    <div class="s5-mini-col">
+                      <div class="s5-mini-hd">Assets</div>
+                      <div class="s5-mini-block f9-ir">Intl. Reserves</div>
+                      <div class="s5-mini-filler">Other</div>
                     </div>
-                    <div class="f1v2-col">
-                      <div class="f1v2-hd">Liabilities</div>
-                      <div class="f1v2-block f1v2-reserves">Banks' Reserves</div>
-                      <div class="f1v2-block f9-loan">Treasury G.A.</div>
-                      <div class="f1v2-filler">Other L&amp;E</div>
+                    <div class="s5-mini-col">
+                      <div class="s5-mini-hd">Liabilities</div>
+                      <div class="s5-mini-block f1v2-reserves">Banks' Reserves</div>
+                      <div class="s5-mini-block f9-loan">Treasury G.A.</div>
+                      <div class="s5-mini-filler">Other L&amp;E</div>
                     </div>
                   </div>
                 </div>
-                <div class="f1v2-arrow">
+                <div class="s5-mini-arrow">
                   <div class="f1v2-arrow-line"><div class="f1v2-arrow-h"></div><div class="f1v2-arrow-head"></div></div>
-                  <div class="f1v2-arrow-lbl">inflow</div>
+                  <div class="f1v2-arrow-lbl">BoP inflow</div>
                 </div>
-                <div class="f1v2-tg">
-                  <div class="f1v2-bs">
-                    <div class="f1v2-col assets">
-                      <div class="f1v2-hd">Assets</div>
-                      <div class="f1v2-block f1v2-new-dep">&#8593; New I.R.</div>
-                      <div class="f1v2-block f9-ir">Intl. Reserves</div>
-                      <div class="f1v2-filler">Other</div>
+                <div class="s5-mini-state">
+                  <div class="s5-mini-label hi">After</div>
+                  <div class="s5-mini-balance">
+                    <div class="s5-mini-col">
+                      <div class="s5-mini-hd">Assets</div>
+                      <div class="s5-mini-block f1v2-new-dep">+ New I.R.</div>
+                      <div class="s5-mini-block f9-ir">Intl. Reserves</div>
+                      <div class="s5-mini-filler">Other</div>
                     </div>
-                    <div class="f1v2-col">
-                      <div class="f1v2-hd">Liabilities</div>
-                      <div class="f1v2-block f1v2-new-loans">&#8593; New B.R.</div>
-                      <div class="f1v2-block f1v2-reserves">Banks' Reserves</div>
-                      <div class="f1v2-block f9-loan">Treasury G.A.</div>
-                      <div class="f1v2-filler">Other L&amp;E</div>
+                    <div class="s5-mini-col">
+                      <div class="s5-mini-hd">Liabilities</div>
+                      <div class="s5-mini-block f1v2-new-loans">+ New Banks' Res.</div>
+                      <div class="s5-mini-block f1v2-reserves">Banks' Reserves</div>
+                      <div class="s5-mini-block f9-loan">Treasury G.A.</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Commercial Bank -->
-          <div class="f1v2-entity">
-            <div class="f1v2-title" style="background:var(--green-dark);">Commercial Bank</div>
-            <div style="flex:1;display:flex;flex-direction:column;background:rgba(255,255,255,0.38);border:1px solid var(--line);border-top:none;overflow:hidden;">
-              <div style="display:flex;align-items:center;gap:0.8rem;padding:0.3rem 0.85rem 0.1rem;flex-shrink:0;">
-                <div style="flex:1;text-align:center;" class="f1v2-tl">Before</div>
-                <div style="min-width:2.9rem;flex-shrink:0;"></div>
-                <div style="flex:1;text-align:center;" class="f1v2-tl hi">After BoP Inflow</div>
-              </div>
-              <div style="flex:1;display:flex;align-items:flex-end;gap:0.8rem;padding:0 0.85rem 0.5rem;overflow:hidden;">
-                <div class="f1v2-tg">
-                  <div class="f1v2-bs">
-                    <div class="f1v2-col assets">
-                      <div class="f1v2-hd">Assets</div>
-                      <div class="f1v2-block f1v2-currency">Currency</div>
-                      <div class="f1v2-block f1v2-reserves">Banks' Reserves</div>
-                      <div class="f1v2-block f1v2-prev-loans">Loans</div>
+            <div class="s5-mini-entity">
+              <div class="s5-mini-title bank">Commercial Bank</div>
+              <div class="s5-mini-states">
+                <div class="s5-mini-state">
+                  <div class="s5-mini-label">Before</div>
+                  <div class="s5-mini-balance">
+                    <div class="s5-mini-col">
+                      <div class="s5-mini-hd">Assets</div>
+                      <div class="s5-mini-block f1v2-reserves">Banks' Reserves</div>
+                      <div class="s5-mini-block f9-ir">External Assets</div>
+                      <div class="s5-mini-filler">Loans</div>
                     </div>
-                    <div class="f1v2-col">
-                      <div class="f1v2-hd">Liabilities</div>
-                      <div class="f1v2-block f1v2-deposits">Deposits</div>
-                      <div class="f1v2-filler">Other L&amp;E</div>
+                    <div class="s5-mini-col">
+                      <div class="s5-mini-hd">Liabilities</div>
+                      <div class="s5-mini-block f1v2-deposits">Deposits</div>
+                      <div class="s5-mini-filler">Other L&amp;E</div>
                     </div>
                   </div>
                 </div>
-                <div class="f1v2-arrow">
+                <div class="s5-mini-arrow">
                   <div class="f1v2-arrow-line"><div class="f1v2-arrow-h"></div><div class="f1v2-arrow-head"></div></div>
-                  <div class="f1v2-arrow-lbl">reserves up</div>
+                  <div class="f1v2-arrow-lbl">reserves credited</div>
                 </div>
-                <div class="f1v2-tg">
-                  <div class="f1v2-bs">
-                    <div class="f1v2-col assets">
-                      <div class="f1v2-hd">Assets</div>
-                      <div class="f1v2-block f1v2-new-loans">&#8593; New B.R.</div>
-                      <div class="f1v2-block f1v2-currency">Currency</div>
-                      <div class="f1v2-block f1v2-reserves">Banks' Reserves</div>
-                      <div class="f1v2-block f1v2-prev-loans">Loans</div>
+                <div class="s5-mini-state">
+                  <div class="s5-mini-label hi">After</div>
+                  <div class="s5-mini-balance">
+                    <div class="s5-mini-col">
+                      <div class="s5-mini-hd">Assets</div>
+                      <div class="s5-mini-block f1v2-new-loans">+ New Banks' Res.</div>
+                      <div class="s5-mini-block f1v2-reserves">Banks' Reserves</div>
+                      <div class="s5-mini-filler">Loans</div>
                     </div>
-                    <div class="f1v2-col">
-                      <div class="f1v2-hd">Liabilities</div>
-                      <div class="f1v2-block" style="background:rgba(196,82,28,0.88);color:var(--white);font-weight:700;">&#8593; New Deposits</div>
-                      <div class="f1v2-block f1v2-deposits">Deposits</div>
-                      <div class="f1v2-filler">Other L&amp;E</div>
+                    <div class="s5-mini-col">
+                      <div class="s5-mini-hd">Liabilities</div>
+                      <div class="s5-mini-block f1v2-new-dep">+ New Deposits</div>
+                      <div class="s5-mini-block f1v2-deposits">Deposits</div>
+                      <div class="s5-mini-filler">Other L&amp;E</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-        <p style="font-size:var(--t-label);color:var(--ink-mid);"><em style="color:var(--red);">IR are already inside the economy</em> — every inflow creates a matching domestic liability. Outflows destroy deposits alongside IR.</p>
+        <p class="s5-closing"><em style="color:var(--red);font-style:italic;">IR are already inside the economy:</em> each inflow creates a matching domestic liability; each outflow destroys deposits alongside reserves.</p>
       </div>
-
     </div>
   </div>
 </section>
 
 <section class="slide alt">
-  <div class="split">
-    <div class="stack cs">
-      <div class="reveal d1">
-        <p class="label">Risk Channel 1 — Central Bank Financing</p>
-        <h2>Dollarization does <em>not</em> prevent monetization</h2>
+  <div class="s6-layout reveal d1">
+    <div class="s6-left">
+      <div>
+        <p class="label">Risk Channel 1 - Central Bank Financing</p>
+        <h2 class="s6-title">Dollarization does <em>not</em> prevent monetization</h2>
       </div>
-      <p class="reveal d2">"The conventional thinking assumed that dollarization imposes fiscal discipline and that monetary financing is not possible in a fully dollarized regime as the central bank does not issue its own currency."</p>
-      <div class="panel reveal d3" style="border-left:2.5px solid var(--red);background:var(--red-dim);">
-        <h3>The reality</h3>
-        <p style="font-size:var(--t-small);">"It is not the monetary regime itself, but its <strong>legislation</strong> that prohibits a central bank from creating new deposits in favor of the government."</p>
+      <div class="s6-quote reveal d2">
+        <h3>The regime is not the binding constraint.</h3>
+        <p>It is the legal framework that prevents a central bank from creating deposits in favor of the government.</p>
       </div>
-      <p class="reveal d4" style="font-size:var(--t-small);color:var(--ink-muted);">In the absence of a national currency, money creation on the central bank's balance sheet to sustain fiscal spending immediately generates BoP pressures — it is the only mechanism to resolve the resulting monetary disequilibrium.</p>
+      <div class="s6-note reveal d3">If public spending is financed by central-bank balance-sheet expansion, domestic money rises without a matching green-dollar inflow.</div>
     </div>
-    <!-- Figure 9 v2 right column -->
-    <div class="stack cs reveal d3" style="height:100%;justify-content:space-between;">
-      <p class="label" style="margin-bottom:0.3rem;">Figure 9 · Credit Expansion and Deposit Creation</p>
 
-      <!-- CENTRAL BANK — 3 states -->
-      <div style="display:flex;flex-direction:column;">
-        <div style="font-size:var(--t-small);font-weight:700;letter-spacing:0.06em;color:var(--white);background:var(--ink);padding:0.28rem 0.75rem;display:inline-block;">Central Bank</div>
-        <div style="display:flex;flex-direction:column;background:rgba(255,255,255,0.38);border:1px solid var(--line);border-top:none;overflow:hidden;">
-          <!-- labels row: 3 labels + 2 spacers matching arrow widths -->
-          <div style="display:flex;align-items:center;gap:0.5rem;padding:0.3rem 0.7rem 0.1rem;flex-shrink:0;">
-            <div style="flex:1;text-align:center;" class="f1v2-tl">Before</div>
-            <div style="min-width:2.2rem;flex-shrink:0;"></div>
-            <div style="flex:1;text-align:center;color:var(--amber);" class="f1v2-tl">Gov. Borrows</div>
-            <div style="min-width:2.2rem;flex-shrink:0;"></div>
-            <div style="flex:1;text-align:center;" class="f1v2-tl hi">Gov. Spends</div>
+    <div class="s6-right reveal d2">
+      <p class="label" style="margin-bottom:0;">Fiscal Monetization Mechanism</p>
+      <div class="s6-mechanism">
+        <div class="s6-mechanism-title">Credit expansion and deposit creation</div>
+        <div class="s6-steps">
+          <div class="s6-step">
+            <div class="s6-num">1</div>
+            <h3>CBE buys domestic debt</h3>
+            <p>The central bank adds a government asset to its balance sheet.</p>
           </div>
-          <!-- balance sheets: floor-aligned -->
-          <div style="display:flex;align-items:flex-end;gap:0.5rem;padding:0 0.7rem 0.5rem;overflow:hidden;">
-            <!-- Before -->
-            <div class="f1v2-tg">
-              <div class="f1v2-bs">
-                <div class="f1v2-col assets">
-                  <div class="f1v2-hd">Assets</div>
-                  <div class="f1v2-block f9-ir">Intl. Reserves</div>
-                  <div class="f1v2-filler">Other</div>
+          <div class="s6-step">
+            <div class="s6-num">2</div>
+            <h3>Gov. deposit appears</h3>
+            <p>A new public-sector deposit is created as a CBE liability.</p>
+          </div>
+          <div class="s6-step">
+            <div class="s6-num">3</div>
+            <h3>Government spends</h3>
+            <p>The public deposit moves into private bank reserves.</p>
+          </div>
+          <div class="s6-step">
+            <div class="s6-num">4</div>
+            <h3>Private deposits rise</h3>
+            <p>Banks credit households and firms with new deposits.</p>
+          </div>
+        </div>
+
+        <div class="s6-balances">
+          <div class="s6-entity">
+            <div class="s6-entity-name">Central Bank</div>
+            <div class="s6-state-row">
+              <div class="s6-state">
+                <div class="s6-state-label">Before</div>
+                <div class="s6-bs">
+                  <div class="s6-col">
+                    <div class="s6-hd">Assets</div>
+                    <div class="s6-cell s6-ir">Intl. Reserves</div>
+                    <div class="s6-fill">Other</div>
+                  </div>
+                  <div class="s6-col">
+                    <div class="s6-hd">Liabilities</div>
+                    <div class="s6-cell s6-gov">Gov. Deposits</div>
+                    <div class="s6-cell s6-res">Banks' Reserves</div>
+                  </div>
                 </div>
-                <div class="f1v2-col">
-                  <div class="f1v2-hd">Liabilities</div>
-                  <div class="f1v2-block f9-gray">Initial Gov. Deposits</div>
-                  <div class="f1v2-block f9-res">Banks' Reserves</div>
+              </div>
+              <div class="s6-arrow">
+                <div class="s6-arrow-line"><div class="s6-arrow-stem"></div><div class="s6-arrow-head"></div></div>
+                <div class="s6-arrow-label">borrows</div>
+              </div>
+              <div class="s6-state">
+                <div class="s6-state-label hi">Gov. Borrows</div>
+                <div class="s6-bs">
+                  <div class="s6-col">
+                    <div class="s6-hd">Assets</div>
+                    <div class="s6-cell s6-debt">+ Dom. Debt</div>
+                    <div class="s6-cell s6-ir">Intl. Reserves</div>
+                  </div>
+                  <div class="s6-col">
+                    <div class="s6-hd">Liabilities</div>
+                    <div class="s6-cell s6-new-gov">+ Gov. Deposit</div>
+                    <div class="s6-cell s6-res">Banks' Reserves</div>
+                  </div>
+                </div>
+              </div>
+              <div class="s6-arrow">
+                <div class="s6-arrow-line"><div class="s6-arrow-stem"></div><div class="s6-arrow-head"></div></div>
+                <div class="s6-arrow-label">spends</div>
+              </div>
+              <div class="s6-state">
+                <div class="s6-state-label hi">Gov. Spends</div>
+                <div class="s6-bs">
+                  <div class="s6-col">
+                    <div class="s6-hd">Assets</div>
+                    <div class="s6-cell s6-debt">Dom. Debt</div>
+                    <div class="s6-cell s6-ir">Intl. Reserves</div>
+                  </div>
+                  <div class="s6-col">
+                    <div class="s6-hd">Liabilities</div>
+                    <div class="s6-cell s6-new-res">+ Banks' Res.</div>
+                    <div class="s6-cell s6-gov">Gov. Deposits</div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="f1v2-arrow">
-              <div class="f1v2-arrow-line"><div class="f1v2-arrow-h"></div><div class="f1v2-arrow-head"></div></div>
-              <div class="f1v2-arrow-lbl">borrows</div>
-            </div>
-            <!-- Gov. Borrows -->
-            <div class="f1v2-tg">
-              <div class="f1v2-bs">
-                <div class="f1v2-col assets">
-                  <div class="f1v2-hd">Assets</div>
-                  <div class="f1v2-block f9-s1">① Dom. Debt</div>
-                  <div class="f1v2-block f9-ir">Intl. Reserves</div>
-                  <div class="f1v2-filler">Other</div>
-                </div>
-                <div class="f1v2-col">
-                  <div class="f1v2-hd">Liabilities</div>
-                  <div class="f1v2-block f9-s2" style="font-size:var(--t-label);">② New Gov. Deposit</div>
-                  <div class="f1v2-block f9-gray">Initial Gov. Deposits</div>
-                  <div class="f1v2-block f9-res">Banks' Reserves</div>
+          </div>
+
+          <div class="s6-entity">
+            <div class="s6-entity-name bank">Commercial Bank</div>
+            <div class="s6-state-row bank">
+              <div class="s6-state">
+                <div class="s6-state-label">Before</div>
+                <div class="s6-bs">
+                  <div class="s6-col">
+                    <div class="s6-hd">Assets</div>
+                    <div class="s6-cell s6-res">Banks' Reserves</div>
+                    <div class="s6-cell s6-ir">Loans</div>
+                  </div>
+                  <div class="s6-col">
+                    <div class="s6-hd">Liabilities</div>
+                    <div class="s6-cell s6-dep">Deposits</div>
+                    <div class="s6-fill">Other L&amp;E</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="f1v2-arrow">
-              <div class="f1v2-arrow-line"><div class="f1v2-arrow-h"></div><div class="f1v2-arrow-head"></div></div>
-              <div class="f1v2-arrow-lbl">spends</div>
-            </div>
-            <!-- Gov. Spends -->
-            <div class="f1v2-tg">
-              <div class="f1v2-bs">
-                <div class="f1v2-col assets">
-                  <div class="f1v2-hd">Assets</div>
-                  <div class="f1v2-block f9-s1">① Dom. Debt</div>
-                  <div class="f1v2-block f9-ir">Intl. Reserves</div>
-                  <div class="f1v2-filler">Other</div>
-                </div>
-                <div class="f1v2-col">
-                  <div class="f1v2-hd">Liabilities</div>
-                  <div class="f1v2-block f9-s3" style="font-size:var(--t-label);">③ New Banks' Res. ↑</div>
-                  <div class="f1v2-block f9-gray">Initial Gov. Deposits</div>
-                  <div class="f1v2-block f9-res">Banks' Reserves</div>
+              <div class="s6-arrow">
+                <div class="s6-arrow-line"><div class="s6-arrow-stem"></div><div class="s6-arrow-head"></div></div>
+                <div class="s6-arrow-label">credited</div>
+              </div>
+              <div class="s6-state">
+                <div class="s6-state-label hi">After</div>
+                <div class="s6-bs">
+                  <div class="s6-col">
+                    <div class="s6-hd">Assets</div>
+                    <div class="s6-cell s6-new-res">+ Banks' Res.</div>
+                    <div class="s6-cell s6-res">Banks' Reserves</div>
+                  </div>
+                  <div class="s6-col">
+                    <div class="s6-hd">Liabilities</div>
+                    <div class="s6-cell s6-new-dep">+ New Deposits</div>
+                    <div class="s6-cell s6-dep">Deposits</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Flow bridge -->
-      <div class="f9-bridge">
-        <p style="font-size:var(--t-label);color:var(--amber);font-weight:600;">② New Gov. Deposit &nbsp;→&nbsp; ③ New Banks' Reserves</p>
-        <p style="font-size:var(--t-label);color:var(--ink-muted);margin-top:0.15rem;">As govt. spends, the public CB liability becomes private bank reserves</p>
-      </div>
-
-      <!-- COMMERCIAL BANK — 2 states -->
-      <div style="display:flex;flex-direction:column;">
-        <div style="font-size:var(--t-small);font-weight:700;letter-spacing:0.06em;color:var(--white);background:var(--green-dark);padding:0.28rem 0.75rem;display:inline-block;">Commercial Bank</div>
-        <div style="display:flex;flex-direction:column;background:rgba(255,255,255,0.38);border:1px solid var(--line);border-top:none;overflow:hidden;">
-          <div style="display:flex;align-items:center;gap:0.5rem;padding:0.3rem 0.7rem 0.1rem;flex-shrink:0;">
-            <div style="flex:1;text-align:center;" class="f1v2-tl">Before</div>
-            <div style="min-width:2.2rem;flex-shrink:0;"></div>
-            <div style="flex:1;text-align:center;" class="f1v2-tl hi">After</div>
-          </div>
-          <div style="display:flex;align-items:flex-end;gap:0.5rem;padding:0 0.7rem 0.5rem;overflow:hidden;">
-            <div class="f1v2-tg">
-              <div class="f1v2-bs">
-                <div class="f1v2-col assets">
-                  <div class="f1v2-hd">Assets</div>
-                  <div class="f1v2-block f9-res">Banks' Reserves</div>
-                  <div class="f1v2-block f9-loan">Loans</div>
-                </div>
-                <div class="f1v2-col">
-                  <div class="f1v2-hd">Liabilities</div>
-                  <div class="f1v2-block f9-dep">Deposits</div>
-                  <div class="f1v2-filler">Other L.</div>
-                </div>
-              </div>
-            </div>
-            <div class="f1v2-arrow">
-              <div class="f1v2-arrow-line"><div class="f1v2-arrow-h"></div><div class="f1v2-arrow-head"></div></div>
-              <div class="f1v2-arrow-lbl">reserves credited</div>
-            </div>
-            <div class="f1v2-tg">
-              <div class="f1v2-bs">
-                <div class="f1v2-col assets">
-                  <div class="f1v2-hd">Assets</div>
-                  <div class="f1v2-block f9-s3" style="font-size:var(--t-label);">③ New Banks' Res. ↑</div>
-                  <div class="f1v2-block f9-res">Banks' Reserves</div>
-                  <div class="f1v2-block f9-loan">Loans</div>
-                </div>
-                <div class="f1v2-col">
-                  <div class="f1v2-hd">Liabilities</div>
-                  <div class="f1v2-block f9-s4">④ New Deposits</div>
-                  <div class="f1v2-block f9-dep">Deposits</div>
-                  <div class="f1v2-filler">Other L.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Key note -->
-      <div class="panel" style="background:var(--red-dim);border-color:rgba(184,32,47,0.2);padding:0.45rem 0.75rem;">
-        <p style="font-size:var(--t-small);">IR unchanged throughout &nbsp;·&nbsp; More domestic liabilities, same HPM stock &nbsp;·&nbsp; Banks cannot distinguish these reserves from BoP-sourced ones</p>
-      </div>
+      <p class="s6-closing">Net result: M2 expands without a BoP inflow. No new green dollar entered; yellow dollars multiplied.</p>
     </div>
   </div>
 </section>
@@ -974,82 +1221,92 @@
 <!-- ═══════════════════════════════════════════════════════ S9 — CROSS-HOLDINGS -->
 <section class="slide">
   <div class="full stack" style="height:100%;justify-content:space-between;">
-    <div class="reveal d1">
-      <p class="label">Risk Channel 2 — Cross-Holdings</p>
-      <h2><em>Illusory</em> liquidity</h2>
-    </div>
+    <div class="s7-layout reveal d1">
+      <div class="s7-left">
+        <div>
+          <p class="label">Risk Channel 2 — Cross-Holdings</p>
+          <h2 class="s7-title"><em>Illusory</em> liquidity</h2>
+        </div>
 
-    <!-- Three T-account pairs: t=0 | t=1 | t=2 -->
-    <div class="reveal d2" style="flex:1;display:flex;flex-direction:column;gap:var(--gap);justify-content:center;">
+        <div class="s7-card risk reveal d2">
+          <h3>Deposits rise, but HPM does not.</h3>
+          <p>When Bank A buys a certificate issued by Bank B, reserves move between banks while the receiving bank creates a new deposit. A reciprocal operation repeats the effect in the opposite direction.</p>
+        </div>
 
-      <!-- t=0 -->
-      <div>
-        <p style="font-size:var(--t-small);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:0.4rem;">t = 0 &nbsp;·&nbsp; Initial state</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);">
-          <div class="tacct-standalone">
-            <div class="tacct-head"><div class="tacct-hc">Bank A — Assets</div><div class="tacct-hc">Bank A — Liabilities</div></div>
-            <div class="tacct-body">
-              <div class="tacct-c">Reserves &nbsp;<strong>1,000</strong></div><div class="tacct-c">Deposits &nbsp;<strong>5,500</strong></div>
-              <div class="tacct-c dim">Loans, other assets</div><div class="tacct-c dim">Other L &amp; E</div>
-            </div>
-          </div>
-          <div class="tacct-standalone">
-            <div class="tacct-head"><div class="tacct-hc">Bank B — Assets</div><div class="tacct-hc">Bank B — Liabilities</div></div>
-            <div class="tacct-body">
-              <div class="tacct-c">Reserves &nbsp;<strong>2,000</strong></div><div class="tacct-c">Deposits &nbsp;<strong>10,500</strong></div>
-              <div class="tacct-c dim">Loans, other assets</div><div class="tacct-c dim">Other L &amp; E</div>
-            </div>
-          </div>
+        <div class="s7-card reveal d3">
+          <h3>Why it matters</h3>
+          <p>Cross-holdings can inflate M2 and liquidity indicators without new balance-of-payments inflows, obscuring the origin and quality of domestic money.</p>
         </div>
       </div>
 
-      <!-- t=1 -->
-      <div>
-        <p style="font-size:var(--t-small);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);margin-bottom:0.4rem;">t = 1 &nbsp;·&nbsp; Bank A invests 200 in Bank B</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);">
-          <div class="tacct-standalone">
-            <div class="tacct-head"><div class="tacct-hc">Bank A — Assets</div><div class="tacct-hc">Bank A — Liabilities</div></div>
-            <div class="tacct-body">
-              <div class="tacct-c nr">Reserves &nbsp;<strong>800</strong> &nbsp;(−200)</div><div class="tacct-c">Deposits &nbsp;5,500 &nbsp;—</div>
-              <div class="tacct-c ng">Local inv. &nbsp;<strong>+200</strong> &nbsp;(new)</div><div class="tacct-c"></div>
-            </div>
+      <div class="s7-mech reveal d2">
+        <p class="label" style="margin-bottom:0;">Example from Section 3.2.2</p>
+        <div class="s7-grid">
+          <div class="s7-corner">Bank</div>
+          <div class="s7-time">
+            <h3>t = 0</h3>
+            <p>Initial state: both banks hold excess reserves at the BCE.</p>
           </div>
-          <div class="tacct-standalone">
-            <div class="tacct-head"><div class="tacct-hc">Bank B — Assets</div><div class="tacct-hc">Bank B — Liabilities</div></div>
-            <div class="tacct-body">
-              <div class="tacct-c ng">Reserves &nbsp;<strong>2,200</strong> &nbsp;(+200)</div><div class="tacct-c ng">Deposits &nbsp;<strong>10,700</strong> &nbsp;(+200) ↑ M2</div>
-              <div class="tacct-c"></div><div class="tacct-c"></div>
-            </div>
+          <div class="s7-time">
+            <h3>t = 1</h3>
+            <p>Bank A invests 200 in a Bank B certificate.</p>
+          </div>
+          <div class="s7-time">
+            <h3>t = 2</h3>
+            <p>Bank B reciprocates and invests 200 in Bank A.</p>
+          </div>
+
+          <div class="s7-bank">Bank A</div>
+          <div class="s7-cell">
+            <div class="s7-item"><span>BCE reserves</span><strong>1,000</strong></div>
+            <div class="s7-item"><span>Local investments</span><strong>300</strong></div>
+            <div class="s7-item"><span>Deposits</span><strong>5,500</strong></div>
+          </div>
+          <div class="s7-cell">
+            <div class="s7-item down"><span>BCE reserves</span><strong>800 (-200)</strong></div>
+            <div class="s7-item new"><span>Local investments</span><strong>500 (+200)</strong></div>
+            <div class="s7-item"><span>Deposits</span><strong>5,500</strong></div>
+          </div>
+          <div class="s7-cell">
+            <div class="s7-item"><span>BCE reserves</span><strong>1,000</strong></div>
+            <div class="s7-item"><span>Local investments</span><strong>500</strong></div>
+            <div class="s7-item up"><span>Deposits</span><strong>5,700 (+200)</strong></div>
+          </div>
+
+          <div class="s7-bank b">Bank B</div>
+          <div class="s7-cell">
+            <div class="s7-item"><span>BCE reserves</span><strong>2,000</strong></div>
+            <div class="s7-item"><span>Local investments</span><strong>600</strong></div>
+            <div class="s7-item"><span>Deposits</span><strong>10,500</strong></div>
+          </div>
+          <div class="s7-cell">
+            <div class="s7-item up"><span>BCE reserves</span><strong>2,200 (+200)</strong></div>
+            <div class="s7-item"><span>Local investments</span><strong>600</strong></div>
+            <div class="s7-item up"><span>Deposits</span><strong>10,700 (+200)</strong></div>
+          </div>
+          <div class="s7-cell">
+            <div class="s7-item down"><span>BCE reserves</span><strong>2,000 (-200)</strong></div>
+            <div class="s7-item new"><span>Local investments</span><strong>800 (+200)</strong></div>
+            <div class="s7-item"><span>Deposits</span><strong>10,700</strong></div>
+          </div>
+
+          <div class="s7-total-label">System</div>
+          <div class="s7-total">
+            <div class="s7-pill green">BCE reserves<br>3,000</div>
+            <div class="s7-pill">Deposits<br>16,000</div>
+          </div>
+          <div class="s7-total">
+            <div class="s7-pill green">BCE reserves<br>3,000</div>
+            <div class="s7-pill red">Deposits<br>16,200</div>
+          </div>
+          <div class="s7-total">
+            <div class="s7-pill green">BCE reserves<br>3,000</div>
+            <div class="s7-pill red">Deposits<br>16,400</div>
           </div>
         </div>
-      </div>
 
-      <!-- t=2 -->
-      <div>
-        <p style="font-size:var(--t-small);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);margin-bottom:0.4rem;">t = 2 &nbsp;·&nbsp; Bank B reciprocates: invests 200 in Bank A</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);">
-          <div class="tacct-standalone">
-            <div class="tacct-head"><div class="tacct-hc">Bank A — Assets</div><div class="tacct-hc">Bank A — Liabilities</div></div>
-            <div class="tacct-body">
-              <div class="tacct-c ng">Reserves &nbsp;<strong>1,000</strong> &nbsp;(+200)</div><div class="tacct-c ng">Deposits &nbsp;<strong>5,700</strong> &nbsp;(+200) ↑ M2</div>
-              <div class="tacct-c"></div><div class="tacct-c"></div>
-            </div>
-          </div>
-          <div class="tacct-standalone">
-            <div class="tacct-head"><div class="tacct-hc">Bank B — Assets</div><div class="tacct-hc">Bank B — Liabilities</div></div>
-            <div class="tacct-body">
-              <div class="tacct-c nr">Reserves &nbsp;<strong>2,000</strong> &nbsp;(−200)</div><div class="tacct-c">Deposits &nbsp;10,700 &nbsp;—</div>
-              <div class="tacct-c ng">Local inv. &nbsp;<strong>+200</strong> &nbsp;(new)</div><div class="tacct-c"></div>
-            </div>
-          </div>
-        </div>
+        <p class="s7-closing"><strong>Net result:</strong> M2 rises by 400 while system-wide BCE reserves stay unchanged. These are yellow dollars created by accounting links, not new green dollars from the balance of payments. The operation is bounded by excess reserves and the reserve requirement ratio: max leverage = 1/r.</p>
       </div>
-    </div>
-
-    <div class="panel reveal d3" style="background:var(--red-dim);border-color:rgba(184,32,47,0.2);padding:0.55rem 0.85rem;">
-      <p style="font-size:var(--t-small);">
-        <strong>Net result:</strong> M2 &nbsp;+400 &nbsp;·&nbsp; System reserves &nbsp;unchanged &nbsp;·&nbsp; Zero new HPM entered &nbsp;·&nbsp; Max leverage = 1/r × excess reserves of smaller bank &nbsp;·&nbsp; "The increase in deposits creates the appearance of greater resources — a <em style="color:var(--red);">distorted perception</em> of financial stability."
-      </p>
     </div>
   </div>
 </section>

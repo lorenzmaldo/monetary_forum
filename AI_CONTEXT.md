@@ -4,7 +4,7 @@
 
 This repository contains an HTML slide presentation for the paper **"Monetary Dynamics in Dollarized Economies: The Case of Ecuador"** by **Juan Pablo Erraez** and **Juan Lorenzo Maldonado**.
 
-The current deck is a short presentation version for the **International and Monetary Economics Network 2026**. It points readers to the full paper published in **Cuestiones Economicas, Banco Central del Ecuador, December 2025**, DOI: `https://doi.org/10.47550/RCE/35.2.3`.
+The current deck is a short presentation version for the **IV Congreso Anual Asociacion de Economia del Ecuador**. It points readers to the full paper published in **Cuestiones Economicas, Banco Central del Ecuador, December 2025**, DOI: `https://doi.org/10.47550/RCE/35.2.3`.
 
 ## Purpose
 
@@ -22,15 +22,15 @@ The presentation explains monetary dynamics in Ecuador's dollarized economy thro
 
 ## Current Deck Structure
 
-The current `index.html` is a single-file, full-screen HTML slide deck. Main content blocks:
+The current `index.html` is a single-file, full-screen HTML slide deck. Use the visible slide counter order as the canonical slide numbering when discussing changes with the user; some internal HTML comments preserve older numbering from previous versions. Main content blocks:
 
 1. Title slide with QR code to the paper.
 2. Presentation structure.
 3. Money View framework: hierarchy, endogenous money, and the dollarization constraint.
 4. Ecuador institutional context: seven features shaping dollar flows.
 5. Dual currency and primary money creation.
-6. Risk channel 1: central bank financing.
-7. Risk channel 2: cross-holdings and illusory liquidity.
+6. Risk channel 1: central bank financing, with central-bank and commercial-bank balance sheets.
+7. Risk channel 2: cross-holdings and illusory liquidity, based on section 3.2.2 of the paper.
 8. Risk channel 3: fiscal-monetary link.
 9. Open questions: sustainability, BCE role, and reserve adequacy.
 10. Conclusions: five key takeaways.
@@ -75,6 +75,8 @@ When making the shorter version:
 ## Editing Notes
 
 - The deck currently uses inline styles in several slides. Match local patterns when editing rather than refactoring the whole file.
+- Slides 5, 6, and 7 were recently redesigned with prefixed CSS classes (`s5-`, `s6-`, `s7-`) to avoid disturbing older figure styles.
+- Slide 7 should preserve the accounting logic from paper section 3.2.2: Bank A and Bank B cross-hold certificates; system-wide BCE reserves stay at 3,000 while deposits rise from 16,000 to 16,400.
 - Do not remove the disclaimer about authors' views.
 - Keep author names visible on opening and closing slides.
 - Keep the DOI QR code unless specifically asked to remove it.
