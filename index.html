@@ -693,6 +693,177 @@
       padding:0.58rem 0.8rem; font-size:var(--t-small); font-weight:700;
       color:var(--ink); line-height:1.35;
     }
+
+    /* Slide 8 option */
+    .s8-layout {
+      height:100%; display:grid; grid-template-columns:0.72fr 1.28fr;
+      gap:clamp(1.6rem,3vw,2.8rem); align-items:stretch;
+    }
+    .s8-left {
+      min-height:0; display:flex; flex-direction:column; justify-content:space-between;
+      gap:var(--gap);
+    }
+    .s8-title {
+      font-family:var(--f-display); font-size:clamp(2.4rem,5vw,4.9rem);
+      line-height:0.98; font-weight:900; color:var(--ink); max-width:11ch;
+    }
+    .s8-title em { color:var(--red); font-style:italic; }
+    .s8-thesis {
+      border-left:3px solid var(--red); background:var(--red-dim);
+      padding:0.9rem 1rem;
+    }
+    .s8-thesis h3 {
+      font-size:clamp(1.08rem,1.45vw,1.32rem); line-height:1.16;
+      margin-bottom:0.35rem; color:var(--ink);
+    }
+    .s8-thesis p { font-size:var(--t-small); line-height:1.42; color:var(--ink-mid); }
+    .s8-mini {
+      border:1px solid rgba(154,108,16,0.28); background:var(--amber-dim);
+      padding:0.75rem 0.85rem; font-size:var(--t-small); line-height:1.35;
+      font-weight:650; color:var(--ink);
+    }
+    .s8-right { min-height:0; display:flex; flex-direction:column; gap:0.75rem; }
+    .s8-flow {
+      display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line);
+      background:rgba(255,255,255,0.32);
+    }
+    .s8-flow-step {
+      min-height:7.2rem; padding:0.75rem 0.85rem; border-right:1px solid var(--line);
+      display:flex; flex-direction:column; justify-content:space-between; gap:0.55rem;
+    }
+    .s8-flow-step:last-child { border-right:none; }
+    .s8-num {
+      width:1.55rem; height:1.55rem; display:flex; align-items:center; justify-content:center;
+      border:1.5px solid currentColor; border-radius:50%; color:var(--red);
+      font-size:0.78rem; font-weight:900;
+    }
+    .s8-flow-step h3 { font-size:clamp(0.95rem,1.08vw,1.08rem); line-height:1.12; color:var(--ink); }
+    .s8-flow-step p { font-size:clamp(0.76rem,0.86vw,0.9rem); line-height:1.22; color:var(--ink-muted); }
+    .s8-arrowline {
+      display:grid; grid-template-columns:repeat(3,1fr); align-items:center;
+      margin:-0.25rem 2.5rem -0.12rem;
+    }
+    .s8-arrow {
+      height:1.8rem; position:relative;
+    }
+    .s8-arrow::before {
+      content:""; position:absolute; left:0; right:0.65rem; top:50%;
+      height:2px; background:var(--red);
+    }
+    .s8-arrow::after {
+      content:""; position:absolute; right:0; top:calc(50% - 4px);
+      width:0; height:0; border-top:4px solid transparent; border-bottom:4px solid transparent;
+      border-left:8px solid var(--red);
+    }
+    .s8-implications {
+      flex:1; min-height:0; display:grid; grid-template-columns:repeat(3,1fr);
+      gap:0.75rem;
+    }
+    .s8-imp {
+      border:1px solid var(--line); background:rgba(250,248,243,0.5);
+      padding:0.8rem 0.85rem; display:flex; flex-direction:column; gap:0.4rem;
+    }
+    .s8-imp h3 {
+      font-size:clamp(1rem,1.18vw,1.14rem); line-height:1.15;
+      color:var(--ink); display:flex; align-items:center; gap:0.45rem;
+    }
+    .s8-imp h3 span {
+      width:0.68rem; height:0.68rem; display:inline-block; background:var(--red); flex:0 0 auto;
+    }
+    .s8-imp p { font-size:var(--t-small); line-height:1.38; color:var(--ink-mid); }
+    .s8-imp.green h3 span { background:var(--green-dark); }
+    .s8-imp.amber h3 span { background:var(--amber); }
+    .s8-signal {
+      margin-top:auto; padding-top:0.65rem; border-top:1px solid var(--line);
+      font-size:clamp(1rem,1.25vw,1.18rem); line-height:1.12;
+      color:var(--red); font-weight:900;
+    }
+    .s8-imp.amber .s8-signal { color:var(--amber); }
+    .s8-imp.green .s8-signal { color:var(--green-dark); }
+    .s8-closing {
+      border-left:3px solid var(--red); background:var(--red-dim);
+      padding:0.68rem 0.85rem; font-size:var(--t-small); font-weight:750;
+      line-height:1.34; color:var(--ink);
+    }
+
+    /* Slide 9 option */
+    .s9-layout {
+      height:100%; display:grid; grid-template-rows:auto 1fr auto;
+      gap:clamp(1rem,2vw,1.45rem);
+    }
+    .s9-head {
+      display:grid; grid-template-columns:0.72fr 1.28fr;
+      gap:clamp(1.4rem,2.8vw,2.6rem); align-items:end;
+    }
+    .s9-title {
+      font-family:var(--f-display); font-size:clamp(2.5rem,5.2vw,5rem);
+      line-height:0.98; font-weight:900; color:var(--ink); max-width:18ch;
+    }
+    .s9-title em { color:var(--red); font-style:italic; }
+    .s9-question {
+      border-left:3px solid var(--red); background:var(--red-dim);
+      padding:0.86rem 1rem; font-size:clamp(1.02rem,1.24vw,1.18rem);
+      line-height:1.35; color:var(--ink); font-weight:650;
+    }
+    .s9-cards {
+      min-height:0; display:grid; grid-template-columns:repeat(3,1fr);
+      gap:0.85rem;
+    }
+    .s9-card {
+      min-height:0; border:1px solid var(--line); background:rgba(255,255,255,0.32);
+      display:flex; flex-direction:column;
+    }
+    .s9-card-top {
+      padding:0.75rem 0.85rem; border-bottom:1px solid var(--line);
+      min-height:8.2rem; display:flex; flex-direction:column; gap:0.35rem;
+    }
+    .s9-kicker {
+      font-size:var(--t-label); letter-spacing:0.12em; text-transform:uppercase;
+      font-weight:800; color:var(--red);
+    }
+    .s9-card.amber .s9-kicker { color:var(--amber); }
+    .s9-card.green .s9-kicker { color:var(--green-dark); }
+    .s9-card h3 {
+      font-size:clamp(1.18rem,1.55vw,1.45rem); line-height:1.08;
+      color:var(--ink);
+    }
+    .s9-card p { font-size:var(--t-small); line-height:1.38; color:var(--ink-mid); }
+    .s9-diagnostic {
+      flex:1; min-height:0; display:flex; flex-direction:column; gap:0.45rem;
+      padding:0.72rem 0.85rem;
+    }
+    .s9-row {
+      display:grid; grid-template-columns:1.25rem 1fr; gap:0.5rem; align-items:start;
+      font-size:clamp(0.82rem,0.95vw,0.98rem); line-height:1.26; color:var(--ink-mid);
+    }
+    .s9-mark {
+      width:1.25rem; height:1.25rem; border:1.5px solid currentColor; border-radius:50%;
+      color:var(--red); display:flex; align-items:center; justify-content:center;
+      font-size:0.72rem; font-weight:900; line-height:1;
+    }
+    .s9-card.amber .s9-mark { color:var(--amber); }
+    .s9-card.green .s9-mark { color:var(--green-dark); }
+    .s9-signal {
+      margin-top:auto; padding:0.68rem 0.85rem; border-top:1px solid var(--line);
+      background:var(--red-dim); color:var(--red); font-size:clamp(1rem,1.24vw,1.16rem);
+      line-height:1.12; font-weight:900;
+    }
+    .s9-card.amber .s9-signal { background:var(--amber-dim); color:var(--amber); }
+    .s9-card.green .s9-signal { background:var(--green-dim); color:var(--green-dark); }
+    .s9-footer {
+      display:grid; grid-template-columns:1fr auto; gap:1rem; align-items:center;
+      border-left:3px solid var(--ink); background:rgba(26,24,20,0.06);
+      padding:0.68rem 0.85rem;
+    }
+    .s9-footer p {
+      font-size:var(--t-small); line-height:1.34; color:var(--ink);
+      font-weight:700;
+    }
+    .s9-footer strong { color:var(--red); }
+    .s9-formula {
+      white-space:nowrap; font-size:clamp(1rem,1.3vw,1.22rem);
+      font-weight:900; color:var(--ink);
+    }
   </style>
 </head>
 <body>
@@ -1316,111 +1487,141 @@
 
 <!-- ═══════════════════════════════════════════════════════ S9b — FISCAL -->
 <section class="slide alt">
-  <div class="split">
-    <div class="stack cs">
+  <div class="s8-layout">
+    <div class="s8-left">
       <div class="reveal d1">
         <p class="label">Risk Channel 3 — Fiscal-Monetary Link</p>
-        <h2>Fiscal policy has <em>monetary</em> consequences</h2>
+        <h2 class="s8-title">Fiscal policy sets the <em>money</em> path</h2>
       </div>
-      <p class="reveal d2">Funding public spending by issuing domestic debt creates money without a green-dollar counterpart. The BoP accounting identity makes this mechanical and unavoidable.</p>
-      <p class="reveal d3"><strong>Fiscal consolidation — spending cuts or tax increases — has a contractionary monetary impact,</strong> all else constant. Fiscal and monetary dynamics are structurally inseparable under dollarization.</p>
+
+      <div class="s8-thesis reveal d2">
+        <h3>In a dollarized economy, the fiscal stance is also a liquidity stance.</h3>
+        <p>Domestic public financing and spending move deposits, bank reserves, and pressure on HPM even when no new green dollars enter through the balance of payments.</p>
+      </div>
+
+      <div class="s8-mini reveal d3">
+        The key question is not only whether fiscal policy is solvent. It is whether the resulting domestic claims remain credible against the available stock and flow of externally usable dollars.
+      </div>
     </div>
-    <div class="stack cs reveal d3">
-      <p class="label" style="margin-bottom:0.4rem;">Step-by-Step Flow</p>
-      <div class="stack-sm">
-        <div class="panel" style="font-size:var(--t-small);">
-          <strong style="color:var(--red);">Step 1</strong> &nbsp; Govt. issues domestic bond. Banks purchase with reserves → assets: reserves ↓, securities ↑. Deposit liabilities unchanged.
+
+    <div class="s8-right reveal d2">
+      <p class="label" style="margin-bottom:0;">From Fiscal Operation To Monetary Pressure</p>
+
+      <div class="s8-flow">
+        <div class="s8-flow-step">
+          <div class="s8-num">1</div>
+          <div>
+            <h3>Fiscal stance</h3>
+            <p>Deficits inject spending; consolidation withdraws purchasing power.</p>
+          </div>
         </div>
-        <div style="text-align:center;color:var(--red);font-weight:700;font-size:1.2rem;line-height:1;">↓</div>
-        <div class="panel" style="font-size:var(--t-small);">
-          <strong style="color:var(--red);">Step 2</strong> &nbsp; At BCE: bank reserves ↓, TGA ↑. Liabilities reshuffle only — IR unaffected. Total BCE liabilities unchanged.
+        <div class="s8-flow-step">
+          <div class="s8-num">2</div>
+          <div>
+            <h3>Domestic balance sheets</h3>
+            <p>BCE, banks, and the Treasury reshuffle reserves and deposits.</p>
+          </div>
         </div>
-        <div style="text-align:center;color:var(--red);font-weight:700;font-size:1.2rem;line-height:1;">↓</div>
-        <div class="panel" style="font-size:var(--t-small);">
-          <strong style="color:var(--red);">Step 3</strong> &nbsp; Govt. spends (salaries, contractors). TGA ↓, bank reserves ↑. Private sector recipients receive new deposits.
+        <div class="s8-flow-step">
+          <div class="s8-num">3</div>
+          <div>
+            <h3>Private deposits</h3>
+            <p>M2 can rise or fall before the external constraint is visible.</p>
+          </div>
         </div>
-        <div style="text-align:center;color:var(--red);font-weight:700;font-size:1.2rem;line-height:1;">↓</div>
-        <div class="panel" style="font-size:var(--t-small);border:1.5px solid rgba(184,32,47,0.3);background:var(--red-dim);">
-          <strong style="color:var(--red);">Net result</strong> &nbsp; M2 grows without a BoP inflow. No green dollar entered — yellow dollars multiplied. Fiscal &amp; monetary dynamics are inseparable.
+        <div class="s8-flow-step">
+          <div class="s8-num">4</div>
+          <div>
+            <h3>HPM pressure</h3>
+            <p>More domestic dollars eventually test the stock of green dollars.</p>
+          </div>
         </div>
       </div>
+
+      <div class="s8-arrowline" aria-hidden="true">
+        <div class="s8-arrow"></div>
+        <div class="s8-arrow"></div>
+        <div class="s8-arrow"></div>
+      </div>
+
+      <div class="s8-implications">
+        <div class="s8-imp">
+          <h3><span></span>Expansion</h3>
+          <p>Domestic deficit finance can raise deposits and liquidity indicators without a matching BoP inflow.</p>
+          <strong class="s8-signal">M2 rises before the constraint bites.</strong>
+        </div>
+        <div class="s8-imp amber">
+          <h3><span></span>Consolidation</h3>
+          <p>Spending cuts or tax increases can contract deposits, reserves, and domestic payments capacity.</p>
+          <strong class="s8-signal">Liquidity falls even without de-dollarization.</strong>
+        </div>
+        <div class="s8-imp green">
+          <h3><span></span>Constraint</h3>
+          <p>The sustainability test is whether domestic money growth is backed by durable HPM sources.</p>
+          <strong class="s8-signal">Green-dollar adequacy becomes the anchor.</strong>
+        </div>
+      </div>
+
+      <p class="s8-closing"><strong>Bottom line:</strong> under dollarization, fiscal and monetary dynamics cannot be separated. The public balance sheet helps determine both domestic liquidity and external fragility.</p>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════ S10 — DISCUSSION -->
 <section class="slide alt">
-  <div class="full stack" style="height:100%;justify-content:space-between;">
-    <div class="reveal d1">
-      <p class="label">Open Questions</p>
-      <h2>Sustainability, the BCE's role, and reserve <em>adequacy</em></h2>
+  <div class="s9-layout">
+    <div class="s9-head reveal d1">
+      <div>
+        <p class="label">Diagnostic Questions</p>
+        <h2 class="s9-title">Who backs domestic <em>money</em>?</h2>
+      </div>
+      <p class="s9-question">After the three risk channels, the issue is not only whether M2 expands. The diagnostic task is to identify which HPM source backs domestic claims, how stable that source is, and who manages access to green dollars.</p>
     </div>
 
-    <div class="grid-3 reveal d2" style="flex:1;align-items:start;min-height:0;overflow:hidden;">
-
-      <!-- Column 1: Sustainability -->
-      <div class="stack" style="height:100%;gap:calc(var(--gap)*0.5);">
-        <div>
-          <p class="label" style="color:var(--amber);">Sustainability</p>
-          <h3>Who supplies HPM as public flows <em>recede</em>?</h3>
+    <div class="s9-cards reveal d2">
+      <div class="s9-card amber">
+        <div class="s9-card-top">
+          <p class="s9-kicker">Sustainability</p>
+          <h3>Who supplies HPM when public flows recede?</h3>
+          <p>The public sector has been a key provider of HPM through oil revenues and external debt. A fiscal transition can reduce that impulse and tighten domestic liquidity.</p>
         </div>
-        <p style="font-size:var(--t-small);color:var(--ink-mid);">"The current BoP structure indicates that, at least since 2014, the public sector has supplied HPM for use by the private sector." Oil revenues and external debt have been the dominant source.</p>
-        <div class="fd">
-          <h3>The transition challenge</h3>
-          <p>"As the government transitions into fiscal surpluses, its net contribution of HPM into the system would naturally decline, potentially leading to a monetary contraction."</p>
+        <div class="s9-diagnostic">
+          <div class="s9-row"><span class="s9-mark">?</span><span>Are private-sector inflows durable enough to replace public HPM supply?</span></div>
+          <div class="s9-row"><span class="s9-mark">!</span><span>Liability-creating inflows can expand obligations without improving net foreign assets.</span></div>
         </div>
-        <div class="fd">
-          <h3>Shift since 2024</h3>
-          <p>Private sector net positive contribution for the first time. "It is still early to tell if this change is permanent or transitory."</p>
-        </div>
-        <div class="panel" style="border-left:2.5px solid var(--amber);background:var(--amber-dim);padding:0.5rem 0.75rem;">
-          <p style="font-size:var(--t-label);">Liability-creating inflows expand obligations without improving net foreign asset position</p>
-        </div>
+        <strong class="s9-signal">Public flows may no longer be the engine.</strong>
       </div>
 
-      <!-- Column 2: Role of BCE -->
-      <div class="stack" style="height:100%;gap:calc(var(--gap)*0.5);">
-        <div>
-          <p class="label" style="color:var(--red);">Role of the BCE</p>
-          <h3>BCE pools HPM <em>system-wide</em></h3>
+      <div class="s9-card">
+        <div class="s9-card-top">
+          <p class="s9-kicker">Institutional Anchor</p>
+          <h3>What role should the BCE play as HPM pooler?</h3>
+          <p>The BCE centralizes access to international settlement money, giving banks system-wide access to HPM rather than forcing each bank to self-insure in isolation.</p>
         </div>
-        <p style="font-size:var(--t-small);color:var(--ink-mid);">Every formal transaction with the rest of the world flows through BCE. The centralized pool of international reserves provides all institutions with system-wide access to HPM.</p>
-        <div class="mv ok">
-          <h3>With BCE</h3>
-          <p>All banks, regardless of size or trade exposure, access HPM for international settlements. Pooling creates an equitable baseline for the whole system.</p>
+        <div class="s9-diagnostic">
+          <div class="s9-row"><span class="s9-mark">✓</span><span>Pooling supports equal access to green dollars across the banking system.</span></div>
+          <div class="s9-row"><span class="s9-mark">!</span><span>Any substitute arrangement must avoid becoming a new money-creating balance sheet.</span></div>
         </div>
-        <div class="mv risk">
-          <h3>Without BCE</h3>
-          <p>"Each bank would need to manage its own stock of HPM. Large banks with greater foreign trade exposure would gain advantage over domestic-focused banks."</p>
-        </div>
-        <div class="panel at" style="padding:0.5rem 0.75rem;">
-          <p style="font-size:var(--t-label);"><strong>$6bn</strong> public sector deposits at BCE (Feb 2025) — any alternative must be prevented from expanding its own balance sheet</p>
-        </div>
+        <strong class="s9-signal">Pooling HPM is a systemic function.</strong>
       </div>
 
-      <!-- Column 3: Reserve Adequacy -->
-      <div class="stack" style="height:100%;gap:calc(var(--gap)*0.5);">
-        <div>
-          <p class="label" style="color:var(--green-dark);">Reserve Adequacy</p>
-          <h3>Broad IR + <em>dynamic flows</em> — not static stock</h3>
+      <div class="s9-card green">
+        <div class="s9-card-top">
+          <p class="s9-kicker">Reserve Adequacy</p>
+          <h3>Are we measuring the right reserve constraint?</h3>
+          <p>Official IR alone misses a large part of usable HPM. In dollarization, adequacy depends on broad reserves and the flow dynamics that replenish or drain them.</p>
         </div>
-        <div class="fd">
-          <div class="fd-n">01</div>
-          <h3>Official IR behaves differently</h3>
-          <p>"The central bank cannot purposefully accumulate or sell reserves... entirely dependent on external flows." Standard ARA metrics were designed for countries that can manage reserve levels through policy.</p>
+        <div class="s9-diagnostic">
+          <div class="s9-row"><span class="s9-mark">1</span><span>Broad IR captures official reserves, bank external assets, liquidity funds, and cash.</span></div>
+          <div class="s9-row"><span class="s9-mark">2</span><span>Stable official reserves can hide offsetting inflows and outflows.</span></div>
         </div>
-        <div class="fd">
-          <div class="fd-n">02</div>
-          <h3>Broad IR is the right metric</h3>
-          <p>Benchmarks that ignore ~48% of HPM will systematically misread Ecuador's liquidity position.</p>
-        </div>
-        <div class="fd">
-          <div class="fd-n">03</div>
-          <h3>Stable IR may signal equilibrium</h3>
-          <p>"Higher inflows tend to generate higher outflows as domestic absorption rises — the system self-regulates around a BoP equilibrium." What drives changes is the key diagnostic question.</p>
-        </div>
+        <strong class="s9-signal">Adequacy is dynamic, not static.</strong>
       </div>
+    </div>
 
+    <div class="s9-footer reveal d3">
+      <p><strong>Reading rule:</strong> treat domestic money as a claim on HPM. The relevant policy question is whether the claim is backed by durable green-dollar sources or only by domestic balance-sheet expansion.</p>
+      <div class="s9-formula">M2 → HPM → BoP</div>
     </div>
   </div>
 </section>
