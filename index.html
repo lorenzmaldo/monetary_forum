@@ -132,6 +132,17 @@
     .title-right { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; align-self: center; }
     .qr-box { border: 1px solid var(--line); padding: 0.55rem; background: #fff; display: flex; flex-direction: column; align-items: center; gap: 0.45rem; }
     .qr-label { font-size: var(--t-label); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); text-align: center; max-width: 10rem; line-height: 1.4; }
+    .final-qr-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:0.75rem; align-items:start; }
+    .final-qr-grid .qr-box { min-width:0; padding:0.65rem; }
+    .qr-box.presentation {
+      border:2px solid rgba(26,92,56,0.45); background:var(--green-dim);
+      box-shadow:inset 0 0 0 4px rgba(255,255,255,0.7);
+    }
+    .qr-box.presentation .qr-label { color:var(--green-dark); font-weight:800; }
+    .qr-url {
+      font-size:clamp(0.62rem,0.78vw,0.76rem); color:var(--ink-muted);
+      text-align:center; line-height:1.25; max-width:10.5rem; overflow-wrap:anywhere;
+    }
     .authors { font-family: var(--f-display); font-size: clamp(0.85rem,1.6vw,1.2rem); font-weight: 700; color: var(--ink-mid); line-height: 1.5; }
     .disclaimer { font-size: var(--t-label); color: var(--ink-muted); line-height: 1.55; border-top: 1px solid var(--line); padding-top: 0.7rem; max-width: 55ch; }
 
@@ -1694,9 +1705,16 @@
       </p>
     </div>
     <div class="stack cs reveal d3" style="align-items:center;">
-      <div class="qr-box">
-        <div id="qr-end"></div>
-        <p class="qr-label">Full paper — Cuestiones Económicas<br>Central Bank of Ecuador · 2025</p>
+      <div class="final-qr-grid">
+        <div class="qr-box">
+          <div id="qr-end"></div>
+          <p class="qr-label">Full paper — Cuestiones Económicas<br>Central Bank of Ecuador · 2025</p>
+        </div>
+        <div class="qr-box presentation">
+          <div id="qr-presentation"></div>
+          <p class="qr-label">View this presentation online</p>
+          <p class="qr-url">GitHub Pages</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1759,8 +1777,11 @@
   const url    = 'https://doi.org/10.47550/RCE/35.2.3';
   const qrCfg  = { text: url, width: 150, height: 150, colorDark: '#1a1814', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M };
   const qrTitleCfg = { ...qrCfg, width: 190, height: 190 };
+  const presentationUrl = 'https://lorenzmaldo.github.io/monetary_forum/';
+  const qrPresentationCfg = { text: presentationUrl, width: 150, height: 150, colorDark: '#1a5c38', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M };
   new QRCode(document.getElementById('qr-title'), qrTitleCfg);
   new QRCode(document.getElementById('qr-end'),   qrCfg);
+  new QRCode(document.getElementById('qr-presentation'), qrPresentationCfg);
 </script>
 </body>
 </html>
